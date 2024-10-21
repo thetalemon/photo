@@ -1,0 +1,20 @@
+---
+const isTop = Astro.url.pathname === '/'
+---
+
+{
+  isTop ? (
+    <h1>あざらしあるばむ</h1>
+  ) : (
+    <h1>
+      <a href="/">あざらしあるばむ</a>
+    </h1>
+  )
+}
+
+<style lang="scss">
+  a {
+    text-decoration: none;
+    color: white;
+  }
+</style>

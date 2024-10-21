@@ -1,0 +1,46 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import Card from '@/components/Card.astro'
+import Head from '@/components/Head.astro'
+import { TagList } from '@/data/tags'
+import { PhotoList } from '@/data/photo'
+export const getStaticPaths = async () => {
+  return Object.keys(TagList).map((tag) => ({
+    params: { slug: tag },
+    props: { tag },
+  }))
+}
+
+const { tag } = Astro.props
+const photos = PhotoList.filter((photo) => photo.tagList.includes(TagList[tag]))
+const title = TagList[tag]
+---
+
+<Layout title={title}>
+  <main>
+    <Head />
+    <ul class="cardList">
+      {photos.map((photo) => <Card {...photo} />)}
+    </ul>
+  </main>
+</Layout>
+
+<style lang="scss">
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 950px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .cardList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    row-gap: 24px;
+    column-gap: 16px;
+    justify-content: center;
+    padding: 0;
+  }
+</style>
