@@ -1,4 +1,7 @@
 ---
+import Header from '@/components/Header.astro'
+import Footer from '@/components/Footer.astro'
+
 interface Props {
   title: string
 }
@@ -17,7 +20,11 @@ const { title } = Astro.props
     <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>
 
@@ -25,5 +32,17 @@ const { title } = Astro.props
   html {
     font-family: system-ui, sans-serif;
     background: #3c3c3c;
+  }
+  body {
+    margin: auto;
+    padding: 0.5rem;
+    width: 1000px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  main {
+    margin-bottom: 3rem;
   }
 </style>

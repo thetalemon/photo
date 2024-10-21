@@ -2,28 +2,15 @@
 import Layout from '@/layouts/Layout.astro'
 import Card from '@/components/Card.astro'
 import { PhotoList } from '@/data/photo'
-import Head from '@/components/Head.astro'
 ---
 
 <Layout title="あざらし あるばむ">
-  <main>
-    <Head />
-    <ul class="cardList">
-      {PhotoList.map((photo) => <Card {...photo} />)}
-    </ul>
-  </main>
+  <ul class="cardList">
+    {PhotoList.map((photo) => <Card {...photo} />)}
+  </ul>
 </Layout>
 
 <style lang="scss">
-  main {
-    margin: auto;
-    padding: 1rem;
-    width: 950px;
-    max-width: calc(100% - 2rem);
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
-  }
   .cardList {
     display: grid;
     grid-template-columns: repeat(auto-fill, 300px);

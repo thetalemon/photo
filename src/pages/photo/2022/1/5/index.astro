@@ -1,6 +1,5 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import Head from '@/components/Head.astro'
 import Photo from '@/components/Photo.astro'
 import { getPhotoById } from '@/data/photo'
 import Photo1 from './_1.jpg'
@@ -15,22 +14,9 @@ if (!photo) {
 ---
 
 <Layout title=`${photo.title} | あざらし あるばむ`>
-  <main>
-    <Head />
-    <h2>たぶん大井町</h2>
-    <p>トリキバーガーを買って交差点で信号待ちしてた時</p>
-    <Photo img={Photo1} alt="たけかご" />
-  </main>
+  <h2>たぶん大井町</h2>
+  <p>トリキバーガーを買って交差点で信号待ちしてた時</p>
+  <Photo img={Photo1} alt="たけかご" />
 </Layout>
 
-<style>
-  main {
-    margin: auto;
-    padding: 1rem;
-    width: 950px;
-    max-width: calc(100% - 2rem);
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
-  }
-</style>
+<style></style>
