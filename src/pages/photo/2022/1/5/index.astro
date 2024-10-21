@@ -1,0 +1,36 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import Head from '@/components/Head.astro'
+import Photo from '@/components/Photo.astro'
+import { getPhotoById } from '@/data/photo'
+import Photo1 from './_1.jpg'
+
+const photo = getPhotoById(1)
+if (!photo) {
+  return new Response(null, {
+    status: 404,
+    statusText: 'Not found',
+  })
+}
+---
+
+<Layout title=`${photo.title} | あざらし あるばむ`>
+  <main>
+    <Head />
+    <h2>たぶん大井町</h2>
+    <p>トリキバーガーを買って交差点で信号待ちしてた時</p>
+    <Photo img={Photo1} alt="たけかご" />
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 950px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+</style>

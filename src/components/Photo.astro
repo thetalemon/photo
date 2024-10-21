@@ -10,14 +10,14 @@ interface Props {
 const { img, alt, text } = Astro.props
 ---
 
-<li class="card">
+<div class="card">
   <div class="imgWrapper">
-    <Image class="eyecatch" src={img} alt={alt} width={300} />
+    <Image class="eyecatch" src={img} alt={alt} width={450} />
   </div>
   <p class="text">
     {text}
   </p>
-</li>
+</div>
 
 <style lang="scss">
   .card {
@@ -26,12 +26,6 @@ const { img, alt, text } = Astro.props
     width: fit-content;
     background: white;
     border-radius: 6px;
-    .imgWrapper {
-      border-radius: 6px;
-      height: 200px;
-      width: 280px;
-      overflow: hidden;
-    }
     .text {
       margin: 0.5rem 0 0;
       text-align: center;
