@@ -4,7 +4,7 @@ import Card from '@/components/Card.astro'
 import { PhotoList } from '@/data/photo'
 ---
 
-<Layout title="あざらし あるばむ">
+<Layout title="とあるアルバム">
   <ul class="cardList">
     {PhotoList.map((photo) => <Card {...photo} />)}
   </ul>

@@ -1,0 +1,39 @@
+---
+import { ViewTransitions } from 'astro:transitions'
+import {
+  myUrl,
+  mySiteName,
+  myDefaultOgpImage,
+  mySiteDefaultDescription,
+} from '@/constants/constants'
+
+export interface Props {
+  title?: string
+  ogImage?: string
+}
+
+const { title, ogImage } = Astro.props
+const ogp = ogImage ?? myDefaultOgpImage
+const generateTitle = (title?: string) => {
+  if (!title) return mySiteName
+  if (title === mySiteName) return mySiteName
+  return `${title} | ${mySiteName}`
+}
+
+const pageTitle = generateTitle(title)
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content={mySiteDefaultDescription} />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="generator" content={Astro.generator} />
+  <meta property="og:site_name" content={mySiteName} />
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:url" content={myUrl} />
+  <meta property="og:description" content={mySiteDefaultDescription} />
+  <meta property="og:image" content={ogp} />
+  <title>{pageTitle}</title>
+  <ViewTransitions />
+</head>
