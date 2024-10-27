@@ -1,11 +1,18 @@
 ---
+import { Image } from 'astro:assets'
+import RssImage from '@/img/rss.svg'
 import { HistroyList } from '@/data/history'
 import { getDate } from '@/utils/dateHelper'
 import SectionTitle from '@/components/SectionTitle.astro'
 ---
 
 <div>
-  <SectionTitle title="更新履歴" />
+  <div class="titleArea">
+    <SectionTitle title="更新履歴" />
+    <a href="/feed.xml" target="_blank" aria-label="RSS">
+      <Image class="rss" src={RssImage} alt="rss" width={16} />
+    </a>
+  </div>
   <ul>
     {
       HistroyList.map((item) => (
@@ -21,13 +28,13 @@ import SectionTitle from '@/components/SectionTitle.astro'
 </div>
 
 <style lang="scss">
-  h2 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-  ul {
-    li {
-      margin-bottom: 1rem;
+  .titleArea {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 12px;
+    a {
+      border: none;
+      margin-bottom: 12px;
     }
   }
 </style>

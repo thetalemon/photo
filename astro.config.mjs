@@ -1,6 +1,7 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from 'astro/config'
 
 export default defineConfig({
+  site: 'https://photo.manasas.dev',
   vite: {
     css: {
       preprocessorOptions: {
@@ -10,4 +11,4 @@ export default defineConfig({
       },
     },
   },
-});
+})
