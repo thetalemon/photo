@@ -1,13 +1,19 @@
 ---
+import { Image } from 'astro:assets'
+import TitleImage from '@/img/title.svg'
 const isTop = Astro.url.pathname === '/'
 ---
 
 {
   isTop ? (
-    <h1>あざらしあるばむ</h1>
+    <h1>
+      <Image src={TitleImage} alt="とある アルバム" height={40} />
+    </h1>
   ) : (
     <h1>
-      <a href="/">あざらしあるばむ</a>
+      <a href="/">
+        <Image src={TitleImage} alt="とある アルバム" height={40} />
+      </a>
     </h1>
   )
 }
@@ -15,7 +21,7 @@ const isTop = Astro.url.pathname === '/'
 <style lang="scss">
   h1 {
     color: white;
-    margin: 0.5rem 0 3rem 0;
+    margin: 0.5rem 0 1rem 0;
   }
   a {
     text-decoration: none;

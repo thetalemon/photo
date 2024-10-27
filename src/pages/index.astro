@@ -1,9 +1,21 @@
 ---
 import Layout from '@/layouts/Layout.astro'
 import CardList from '@/components/CardList.astro'
+import History from '@/components/feature/History.astro'
 import { PhotoList } from '@/data/photo'
 ---
 
-<Layout title="とあるアルバム">
-  <CardList list={PhotoList} />
+<Layout>
+  <section>
+    <History />
+  </section>
+  <section>
+    <CardList list={PhotoList} />
+  </section>
 </Layout>
+
+<style lang="scss">
+  section {
+    padding-bottom: 2rem;
+  }
+</style>

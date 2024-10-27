@@ -1,0 +1,50 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { HistroyList } from '@/data/history'
+import { getDate } from '@/utils/dateHelper'
+
+export const getStaticPaths = async () => {
+  return HistroyList.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }))
+}
+
+const { item } = Astro.props
+---
+
+<Layout title={item.title}>
+  <article>
+    <h2>
+      {item.title}
+      <time>
+        {getDate(item.pubDate)}
+      </time>
+    </h2>
+    <div class="articleBody">
+      {item.content}
+    </div>
+  </article>
+</Layout>
+
+<style lang="scss">
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+    margin: 2rem 0 1rem 0;
+    border-bottom: #ccc 1px solid;
+    padding: 0 0 0.5rem 0.5rem;
+  }
+  time {
+    margin-left: 16px;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  article {
+    font-size: 1.1rem;
+  }
+  .articleBody {
+    padding-left: 0.5rem;
+  }
+</style>
