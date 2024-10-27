@@ -1,0 +1,25 @@
+---
+import Card from '@/components/Card.astro'
+import type { Photo } from '@/data/photo'
+
+interface Props {
+  list: Photo[]
+}
+
+const { list } = Astro.props
+---
+
+<ul class="cardList">
+  {list.map((item) => <Card {...item} />)}
+</ul>
+
+<style lang="scss">
+  .cardList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    row-gap: 24px;
+    column-gap: 16px;
+    justify-content: center;
+    padding: 0;
+  }
+</style>

@@ -1,22 +1,9 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import Card from '@/components/Card.astro'
+import CardList from '@/components/CardList.astro'
 import { PhotoList } from '@/data/photo'
 ---
 
 <Layout title="とあるアルバム">
-  <ul class="cardList">
-    {PhotoList.map((photo) => <Card {...photo} />)}
-  </ul>
+  <CardList list={PhotoList} />
 </Layout>
-
-<style lang="scss">
-  .cardList {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 300px);
-    row-gap: 24px;
-    column-gap: 16px;
-    justify-content: center;
-    padding: 0;
-  }
-</style>
