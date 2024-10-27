@@ -25,13 +25,22 @@ const { img, alt, text } = Astro.props
     padding: 10px 8px;
     width: fit-content;
     background: white;
-    border-radius: 6px;
+    border-radius: 4px;
+    img {
+      width: 100%;
+      height: auto;
+    }
     .text {
-      margin: 0.5rem 0 0;
+      margin: 0.5rem 0;
       text-align: center;
-      font-size: 1.3rem;
-      font-weight: bold;
-      min-height: 2.5rem;
+      font-size: 1rem;
+      font-weight: normal;
+      line-height: 1rem;
+      min-height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #3c3c3c;
     }
   }
 </style>

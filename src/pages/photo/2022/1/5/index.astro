@@ -14,9 +14,17 @@ if (!photo) {
 ---
 
 <Layout title={photo.title}>
-  <h2>たぶん大井町</h2>
-  <p>トリキバーガーを買って交差点で信号待ちしてた時</p>
-  <Photo img={Photo1} alt="夕暮れに赤くそびえたつ建設機械" />
+  <h2>{photo.title}</h2>
+  <p>多分トリキバーガーを買って交差点で信号待ちしてた時</p>
+  <Photo
+    img={Photo1}
+    alt="夕暮れに赤くそびえたつ建設機械"
+    text="大きな機械が見えると撮りたくなっちゃう"
+  />
 </Layout>
 
-<style></style>
+<style lang="scss">
+  p {
+    margin: 1rem 0;
+  }
+</style>

@@ -1,0 +1,9 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import CardList from '@/components/CardList.astro'
+import { PhotoList } from '@/data/photo'
+---
+
+<Layout title="とあるアルバム">
+  <CardList list={PhotoList} />
+</Layout>
