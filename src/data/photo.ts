@@ -1,6 +1,7 @@
 import { TagList } from '@/data/tags'
 
 import photo20200105 from '@/pages/photo/2022/1/5/_1.jpg'
+import photo202401022 from '@/pages/photo/2024/10/22/20241022_14.jpg'
 
 export type Photo = {
   id: number
@@ -14,6 +15,16 @@ export type Photo = {
 }
 
 export const PhotoList: Photo[] = [
+  {
+    id: 2,
+    title: '福岡旅行 0日目',
+    eyecatch: photo202401022,
+    year: 2024,
+    month: 10,
+    day: 22,
+    tagList: [TagList.travel, TagList.ferry, TagList.yokosuka],
+    isNew: true,
+  },
   {
     id: 1,
     title: 'たぶん大井町',

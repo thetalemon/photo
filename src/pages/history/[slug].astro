@@ -21,9 +21,7 @@ const { item } = Astro.props
         {getDate(item.pubDate)}
       </time>
     </h2>
-    <div class="articleBody">
-      {item.content}
-    </div>
+    <div class="articleBody" set:html={item.content} />
   </article>
 </Layout>
 

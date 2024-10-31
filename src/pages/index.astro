@@ -11,16 +11,17 @@ import { PhotoList } from '@/data/photo'
       <a href="/about">このサイトについて</a>
     </p>
   </section>
-  <section>
-    <History />
-  </section>
-  <section>
+  <History />
+  <section class="photolist">
     <CardList list={PhotoList} />
   </section>
 </Layout>
 
 <style lang="scss">
   section {
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 0;
+  }
+  .photolist {
+    margin-top: 4rem;
   }
 </style>

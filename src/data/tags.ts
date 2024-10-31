@@ -8,6 +8,9 @@ export const TagList: Tags = {
   Oimachi: '大井町',
   tokyo: '東京',
   kenki: '建設機械',
+  travel: '旅行',
+  ferry: 'フェリー',
+  yokosuka: '横須賀',
 }
 
 export const getTagByValue = (value: string) => {
