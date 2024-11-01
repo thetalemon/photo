@@ -1,6 +1,7 @@
 ---
 import Layout from '@/layouts/Layout.astro'
 import Photo from '@/components/Photo.astro'
+import Row from '@/components/Row.astro'
 import { getPhotoById } from '@/data/photo'
 import { getDate } from '@/utils/dateHelper'
 import Photo1 from './20241022_1.jpg'
@@ -36,6 +37,9 @@ if (!photo) {
     statusText: 'Not found',
   })
 }
+
+const small = 350
+const big = 600
 ---
 
 <Layout title={photo.title}>
@@ -45,92 +49,178 @@ if (!photo) {
       {getDate(new Date(photo.year, photo.month - 1, photo.day))}
     </time>
   </h2>
-
-  <p>行くぞ、福岡。<br />ということで横須賀フェリーターミナルへ</p>
-  <Photo
-    img={Photo1}
-    alt="横須賀のマスコットキャラらしきカモメのスカレー"
-    text="結構おいしそうなカレーを持ってる"
-  />
-  <Photo img={Photo2} alt="スタバ" text="スタバ買ってから行く" />
-  <Photo img={Photo3} alt="夜の横須賀" text="こんな道を通り抜けて" />
-  <Photo
-    img={Photo4}
-    alt="夜の横須賀の交差点"
-    text="こんな交差点も通り抜けて"
-  />
-  <Photo img={Photo5} alt="コンテナの山" text="港っぽくなってきた" />
-  <Photo img={Photo6} alt="夜のエモい自販機" text="エモい自販機を通り過ぎて" />
-  <Photo img={Photo7} alt="遠くに船が見える" text="船っぽいのが見えてきた" />
-  <Photo
-    img={Photo8}
-    alt="フェリーターミナル行きの看板"
-    text="フェリーターミナル行きの看板"
-  />
-  <Photo
-    img={Photo9}
-    alt="北九州行きフェリーの表示"
-    text="足下には北九州行きフェリーの表示"
-  />
-  <p>
-    『マジ？この先になんかある？』って感じの道だったので看板あってよかった。
-  </p>
-  <Photo
-    img={Photo10}
-    alt="コンテナ曳いてるトラックの頭だけの状態のやつ"
-    text="稀に見かけるコンテナ曳いてるトラック頭だけの状態好き"
-  />
-  <Photo img={Photo11} alt="横須賀フェリーターミナル" text="着いた！！！" />
-  <Photo
-    img={Photo12}
-    alt="東京九州フェリーのフェリーターミナル"
-    text="いかにも九州行きそうな名前"
-  />
-  <Photo
-    img={Photo13}
-    alt="フェリーターミナルの中の葉山牛コロッケ"
-    text="葉山牛コロッケを食す。おいしい"
-  />
-  <p>コロッケ以外にもカレーライスとかあるので、はらぺこで行っても大丈夫。</p>
-  <Photo img={Photo14} alt="フェリー" text="これに乗る" />
-  <p>
-    フェリーって乗船手続きとかどうなん？飛行機くらいかかるんかな？って思ってはやめに行ったら、特に何もなかった。
-  </p>
-  <Photo img={Photo15} alt="フェリー内の部屋の扉" text="今日のお部屋です" />
-  <Photo
-    img={Photo16}
-    alt="フェリー内の部屋の机"
-    text="夜行列車くらいの部屋かと思ったら結構しっかりしている"
-  />
-  <Photo
-    img={Photo17}
-    alt="フェリー内の部屋のコンセント"
-    text="2口とUSBはありがたい"
-  />
-  <Photo img={Photo18} alt="フェリー内の部屋のテレビ" text="テレビもある" />
-  <Photo img={Photo19} alt="フェリー内の部屋のベッド" text="ベッドはかため。" />
-  <p>角部屋なのもあってか夜は少し寒かった。あと湿度もちょっと低めに感じた。</p>
-  <Photo img={Photo21} alt="フェリーの甲板" text="遠くに夜の横須賀も見える" />
-  <Photo img={Photo22} alt="夜の横須賀" text="横須賀も綺麗だなあ" />
-  <Photo img={Photo20} alt="フェリーから見る夜空" text="月がきれい" />
-  <p>
-    出航してしまうと甲板には出れなくなる。なので、甲板に出るチャンスは乗った直後～出航するまで
-  </p>
-  <Photo
-    img={Photo23}
-    alt="カップヌードル自販機"
-    text="カップヌードルもあるぞ！結構食べてる人いた"
-  />
-  <Photo
-    img={Photo26}
-    alt="ミルクココアと牛乳とサンデーカップ"
-    text="夜食です"
-  />
-  <Photo
-    img={Photo27}
-    alt="電波ない表示"
-    text="電波ないとこんな表示になるんだあって思って撮ったやつ。"
-  />
+  <article>
+    <p class="center">
+      行くぞ、福岡。<br />ということで横須賀フェリーターミナルへ
+    </p>
+    <Row>
+      <Photo
+        img={Photo1}
+        alt="横須賀のマスコットキャラらしきカモメのスカレー"
+        text="おいしそうなカレーを持ってるカモメ"
+        size={small}
+      />
+      <Photo
+        img={Photo2}
+        alt="スタバ"
+        text="スタバ買ってから行く"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo3}
+        alt="夜の横須賀"
+        text="こんな道を通り抜けて"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo4}
+        alt="夜の横須賀の交差点"
+        text="こんな交差点も通り抜けて"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo img={Photo5} alt="コンテナの山" text="港っぽくなってきた" />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo6}
+        alt="夜のエモい自販機"
+        text="エモい自販機を通り過ぎて"
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo7}
+        alt="遠くに船が見える"
+        text="船っぽいのが見えてきた"
+        size={big}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo8}
+        alt="フェリーターミナル行きの看板"
+        text="フェリーターミナル行きの看板"
+        size={small}
+      />
+      <Photo
+        img={Photo9}
+        alt="北九州行きフェリーの表示"
+        text="足下には北九州行きフェリーの表示"
+        size={small}
+      />
+    </Row>
+    <p class="center">
+      『マジ？この先になんかある？』って感じの道だったので看板あってよかった。
+    </p>
+    <Row>
+      <Photo
+        img={Photo10}
+        alt="コンテナ曳いてるトラックの頭だけの状態のやつ"
+        text="稀に見かけるコンテナ曳いてるトラック頭だけの状態好き"
+      />
+    </Row>
+    <Row>
+      <Photo img={Photo11} alt="横須賀フェリーターミナル" text="着いた！！！" />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo12}
+        alt="東京九州フェリーのフェリーターミナル"
+        text="いかにも九州行きそうな名前"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo13}
+        alt="フェリーターミナルの中の葉山牛コロッケ"
+        text="葉山牛コロッケを食す。おいしい"
+        size={small}
+      />
+    </Row>
+    <p class="center">
+      コロッケ以外にもカレーライスとかあるので、はらぺこで行っても大丈夫。
+    </p>
+    <Row>
+      <Photo img={Photo14} alt="フェリー" text="これに乗る" />
+    </Row>
+    <p class="center">
+      フェリーって乗船手続きとかどうなん？飛行機くらいかかるんかな？って思ってはやめに行ったら、特に何もなかった。
+    </p>
+    <Row>
+      <Photo
+        img={Photo15}
+        alt="フェリー内の部屋の扉"
+        text="今日のお部屋です"
+        size={small}
+      />
+      <Photo
+        img={Photo16}
+        alt="フェリー内の部屋の机"
+        text="夜行列車くらいの部屋かと思ったら結構しっかりしている"
+        size={small}
+      />
+      <Photo
+        img={Photo17}
+        alt="フェリー内の部屋のコンセント"
+        text="2口とUSBはありがたい"
+        size={small}
+      />
+      <Photo
+        img={Photo18}
+        alt="フェリー内の部屋のテレビ"
+        text="テレビもある"
+        size={small}
+      />
+      <Photo
+        img={Photo19}
+        alt="フェリー内の部屋のベッド"
+        text="ベッドはかため。"
+        size={small}
+      />
+    </Row>
+    <p class="center">
+      角部屋なのもあってか夜は少し寒かった。あと湿度もちょっと低めに感じた。
+    </p>
+    <Row>
+      <Photo
+        img={Photo21}
+        alt="フェリーの甲板"
+        text="遠くに夜の横須賀も見える"
+        size={big}
+      />
+      <Photo img={Photo22} alt="夜の横須賀" text="横須賀も綺麗だなあ" />
+      <Photo img={Photo20} alt="フェリーから見る夜空" text="月がきれい" />
+    </Row>
+    <p class="center">
+      出航してしまうと甲板には出れなくなる。なので、甲板に出るチャンスは乗った直後～出航するまで
+    </p>
+    <Row>
+      <Photo
+        img={Photo23}
+        alt="カップヌードル自販機"
+        text="カップヌードルもあるぞ！結構食べてる人いた"
+        size={small}
+      />
+      <Photo
+        img={Photo26}
+        alt="ミルクココアと牛乳とサンデーカップ"
+        text="夜食です"
+      />
+      <Photo
+        img={Photo27}
+        alt="電波ない表示"
+        text="電波ないとこんな表示になるんだあって思って撮ったやつ。"
+        size={small}
+      />
+    </Row>
+  </article>
 </Layout>
 
 <style lang="scss">
@@ -138,8 +228,9 @@ if (!photo) {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     font-weight: normal;
-    margin: 2rem 0;
-    padding: 0;
+    margin: 2rem 0 4rem 0;
+    padding: 0 0 0.5rem 0;
+    border-bottom: 1px solid #ccc;
   }
   time {
     margin-left: 16px;
@@ -147,7 +238,15 @@ if (!photo) {
     color: #ccc;
   }
   p {
-    margin: 2rem 0;
     line-height: 1.5rem;
+  }
+  .center {
+    text-align: center;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 3rem;
   }
 </style>

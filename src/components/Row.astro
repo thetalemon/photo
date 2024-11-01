@@ -1,0 +1,21 @@
+---
+interface Props {
+  center?: boolean
+}
+
+const { center } = Astro.props
+---
+
+<div class=`flex ${center ?? 'center'}`>
+  <slot />
+</div>
+
+<style lang="scss">
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+  }
+</style>
