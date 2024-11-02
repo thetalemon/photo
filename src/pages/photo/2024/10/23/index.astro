@@ -1,0 +1,195 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import Photo from '@/components/Photo.astro'
+import TilteArea from '@/components/photo/TilteArea.astro'
+import Row from '@/components/Row.astro'
+import { getPhotoById } from '@/data/photo'
+import Photo0 from './_20241023_0.jpg'
+import Photo1 from './_20241023_1.jpg'
+import Photo2 from './_20241023_2.jpg'
+import Photo3 from './_20241023_3.jpg'
+import Photo4 from './_20241023_4.jpg'
+import Photo5 from './_20241023_5.jpg'
+import Photo6 from './_20241023_6.jpg'
+import Photo7 from './_20241023_7.jpg'
+import Photo8 from './_20241023_8.jpg'
+import Photo9 from './_20241023_9.jpg'
+import Photo10 from './_20241023_10.jpg'
+import Photo11 from './_20241023_11.jpg'
+import Photo12 from './_20241023_12.jpg'
+import Photo13 from './_20241023_13.jpg'
+import Photo14 from './_20241023_14.jpg'
+import Photo15 from './_20241023_15.jpg'
+import Photo16 from './_20241023_16.jpg'
+import Photo17 from './_20241023_17.jpg'
+import Photo18 from './_20241023_18.jpg'
+
+const photo = getPhotoById(3)
+if (!photo) {
+  return new Response(null, {
+    status: 404,
+    statusText: 'Not found',
+  })
+}
+
+const small = 350
+const big = 600
+---
+
+<Layout title={photo.title}>
+  <TilteArea photo={photo} />
+  <article>
+    <Row>
+      <Photo img={Photo1} alt="海" text="海はやや時化" size={big} />
+    </Row>
+    <p class="center">
+      おはようございます。<br />
+      寝れるか心配だったのですが揺れもあって寝台列車よりも寝れました。<br />
+      アイマスク持って行ったのはナイス判断だったかもしれません。
+    </p>
+    <Row>
+      <Photo
+        img={Photo0}
+        alt="電波なしなときのスマホ画面"
+        text="洋上はこんな表示"
+        size={small}
+      />
+      <Photo
+        img={Photo2}
+        alt="船の居場所を表示している画面"
+        text="紀伊半島の南を走行中"
+      />
+      <Photo img={Photo3} alt="うどん" text="朝ごはんのうどん" size={small} />
+    </Row>
+    <Row>
+      <Photo img={Photo4} alt="はまゆうの御船印" text="御船印も買いまして" />
+    </Row>
+    <p class="center">
+      購入は23日ですが出航日の22日でスタンプ押してもらいました。
+    </p>
+    <Row>
+      <Photo
+        img={Photo5}
+        alt="堅あげポテト九州しょうゆ"
+        text="堅あげポテトを食すなどする"
+        size={small}
+      />
+    </Row>
+    <p class="center">
+      昨日もサンデーカップ食べてますが売店は結構種類豊富です。<br />
+      横須賀・福岡両方の色々なものを揃えてて、カールも売ってます。<br />
+      堅あげポテト九州しょうゆ味はちょっと味濃いめでした。<br />
+      九州ってもしかして味濃い！？って心配だったんですが、結論大丈夫でした。
+    </p>
+    <Row>
+      <Photo img={Photo6} alt="窓の外の海" text="海を見て" size={small} />
+      <Photo
+        img={Photo7}
+        alt="鰤とタコの刺身"
+        text="お昼を食べて"
+        size={small}
+      />
+    </Row>
+    <p class="center">
+      刺身とメロンソーダはないなって刺身がきてから気づきました。<br />
+      でもドリンクバーのメロンソーダ、好きで…………。
+    </p>
+    <Row>
+      <Photo img={Photo8} alt="少し荒れた海" text="また海を見て" size={small} />
+      <Photo img={Photo9} alt="夕暮れの海" text="日が暮れてきた" size={small} />
+    </Row>
+    <Row>
+      <Photo img={Photo10} alt="とんかつ" text="晩御飯食べて" size={small} />
+      <Photo
+        img={Photo11}
+        alt="はまゆうの居場所を示すテレビ"
+        text="そろそろ到着"
+        size={small}
+      />
+    </Row>
+    <p class="center">下船後は無料のバスにのって小倉駅へ。</p>
+    <Row>
+      <Photo
+        img={Photo13}
+        alt="小倉駅"
+        text="はじめまして福岡！！"
+        size={big}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo12}
+        alt="鉄なべの広告"
+        text="おいしそうな広告"
+        size={small}
+      />
+    </Row>
+    <p class="center">福岡、実は餃子も有名らしい。次は食べる。</p>
+
+    <p class="center">宿についたので小倉散策へ</p>
+    <Row>
+      <Photo
+        img={Photo14}
+        alt="小倉の商店街"
+        text="ちょっと散策"
+        size={small}
+      />
+      <Photo
+        img={Photo15}
+        alt="小倉の商店街"
+        text="こんな道を通って…………"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo16}
+        alt="木の扉"
+        text="旅行ハイだから行けた扉"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo img={Photo17} alt="コーヒー" text="おいしい珈琲と" size={small} />
+      <Photo
+        img={Photo18}
+        alt="チーズケーキ"
+        text="おいしいチーズケーキ"
+        size={small}
+      />
+    </Row>
+    <p class="center">
+      宿で『今あいてるいい感じの店！！！』で探してみつけた
+      <a
+        href="https://tabelog.com/fukuoka/A4004/A400401/40044886/"
+        target="_blank"
+      >
+        リバース
+      </a>
+      というお店。<br />
+      入口はちょっと入りづらいけど雰囲気良し、味良しでオススメ。<br />
+      現金のみなので注意。
+    </p>
+
+    <p class="center">
+      人生初長距離フェリー旅編でした。<br />
+      個人的には飛行機の方が好きだなあと思いましたが、<br />
+      人生で1回経験して面白い経験のひとつでもあるなーと思います。<br />
+    </p>
+  </article>
+</Layout>
+
+<style lang="scss">
+  p {
+    line-height: 1.5rem;
+  }
+  .center {
+    text-align: center;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 3rem;
+  }
+</style>

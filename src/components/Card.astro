@@ -7,15 +7,13 @@ import { getUrlByPhoto } from '@/data/photo'
 interface Props {
   title: string
   eyecatch: ImageMetadata
-  year: number
-  month: number
-  day: number
+  photographingDate: Date
   tagList: string[]
   isNew?: boolean
 }
 
-const { title, eyecatch, year, month, day, tagList, isNew } = Astro.props
-const url = getUrlByPhoto(year, month, day)
+const { title, eyecatch, photographingDate, tagList, isNew } = Astro.props
+const url = getUrlByPhoto(photographingDate)
 ---
 
 <li class="card">

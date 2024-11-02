@@ -1,4 +1,5 @@
 import { myUrl } from '@/constants/constants'
+import { getUrlDate, getSimpleDate } from '@/utils/dateHelper'
 
 export type History = {
   title: string
@@ -13,12 +14,9 @@ export type History = {
 const generateAbsoluteUrl = (path: string) => `${myUrl}${path}`
 
 const generateDateRelateData = (date: Date) => {
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  const absoluteUrl = generateAbsoluteUrl(`/history/${year}/${month}/${day}`)
+  const absoluteUrl = generateAbsoluteUrl(`/history/${getUrlDate(date)}`)
   return {
-    slug: `${year}${month}${day}`,
+    slug: getSimpleDate(date),
     id: absoluteUrl,
     link: absoluteUrl,
     pubDate: date,
@@ -27,10 +25,15 @@ const generateDateRelateData = (date: Date) => {
 
 export const HistroyList: History[] = [
   {
+    title: '福岡旅旅行1日目をアップしました',
+    description: '福岡旅行1日目をアップしました',
+    content: `<p><a href="${generateAbsoluteUrl('/photo/2024/10/23')}">福岡旅行1日目</a>をアップしました。</p>`,
+    ...generateDateRelateData(new Date('2024-11-3')),
+  },
+  {
     title: '福岡旅行0日目をアップしました',
     description: '福岡旅行0日目をアップしました',
-    content:
-      '<p><a href="/photo/2024/10/22">福岡旅行0日目</a>をアップしました。</p>',
+    content: `<p><a href="${generateAbsoluteUrl('/photo/2024/10/22')}">福岡旅行0日目</a>をアップしました。</p>`,
     ...generateDateRelateData(new Date('2024-10-31')),
   },
   {

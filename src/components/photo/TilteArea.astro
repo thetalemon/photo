@@ -10,10 +10,17 @@ const { photo } = Astro.props
 ---
 
 <h2>
-  {photo.title}
-  <time>
-    {getDate(new Date(photo.year, photo.month - 1, photo.day))}
-  </time>
+  <p class="title">
+    {photo.title}
+  </p>
+  <p class="date">
+    <span>
+      撮影日: {getDate(photo.photographingDate)}
+    </span>
+    <span>
+      公開日: {getDate(photo.publicationDate)}
+    </span>
+  </p>
 </h2>
 
 <style lang="scss">
@@ -24,10 +31,17 @@ const { photo } = Astro.props
     margin: 4rem 0 3rem 0;
     padding: 0 0 0.5rem 0;
     border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    column-gap: 24px;
   }
-  time {
-    margin-left: 16px;
+  .date {
     font-size: 0.9rem;
     color: #ccc;
+    display: flex;
+    column-gap: 16px;
+    flex-direction: column;
   }
 </style>
