@@ -1,7 +1,7 @@
 import { TagList } from '@/data/tags'
 
 import photo20200105 from '@/pages/photo/2022/1/5/_1.jpg'
-import photo202401022 from '@/pages/photo/2024/10/22/20241022_14.jpg'
+import photo202401022 from '@/pages/photo/2024/10/22/_20241022_14.jpg'
 
 export type Photo = {
   id: number
