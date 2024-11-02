@@ -1,0 +1,33 @@
+---
+import { getDate } from '@/utils/dateHelper'
+import type { Photo } from '@/data/photo'
+
+interface Props {
+  photo: Photo
+}
+
+const { photo } = Astro.props
+---
+
+<h2>
+  {photo.title}
+  <time>
+    {getDate(new Date(photo.year, photo.month - 1, photo.day))}
+  </time>
+</h2>
+
+<style lang="scss">
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+    margin: 4rem 0 3rem 0;
+    padding: 0 0 0.5rem 0;
+    border-bottom: 1px solid #ccc;
+  }
+  time {
+    margin-left: 16px;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+</style>

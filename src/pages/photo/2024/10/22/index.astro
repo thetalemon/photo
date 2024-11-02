@@ -1,9 +1,9 @@
 ---
 import Layout from '@/layouts/Layout.astro'
 import Photo from '@/components/Photo.astro'
+import TilteArea from '@/components/photo/TilteArea.astro'
 import Row from '@/components/Row.astro'
 import { getPhotoById } from '@/data/photo'
-import { getDate } from '@/utils/dateHelper'
 import Photo1 from './_20241022_1.jpg'
 import Photo2 from './_20241022_2.jpg'
 import Photo3 from './_20241022_3.jpg'
@@ -43,12 +43,7 @@ const big = 600
 ---
 
 <Layout title={photo.title}>
-  <h2>
-    {photo.title}
-    <time>
-      {getDate(new Date(photo.year, photo.month - 1, photo.day))}
-    </time>
-  </h2>
+  <TilteArea photo={photo} />
   <article>
     <p class="center">
       行くぞ、福岡。<br />ということで横須賀フェリーターミナルへ
@@ -224,19 +219,6 @@ const big = 600
 </Layout>
 
 <style lang="scss">
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-weight: normal;
-    margin: 2rem 0 4rem 0;
-    padding: 0 0 0.5rem 0;
-    border-bottom: 1px solid #ccc;
-  }
-  time {
-    margin-left: 16px;
-    font-size: 0.9rem;
-    color: #ccc;
-  }
   p {
     line-height: 1.5rem;
   }

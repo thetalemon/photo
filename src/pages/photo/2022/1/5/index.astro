@@ -2,6 +2,8 @@
 import Layout from '@/layouts/Layout.astro'
 import Photo from '@/components/Photo.astro'
 import { getPhotoById } from '@/data/photo'
+import TilteArea from '@/components/photo/TilteArea.astro'
+import Row from '@/components/Row.astro'
 import Photo1 from './_1.jpg'
 
 const photo = getPhotoById(1)
@@ -14,13 +16,15 @@ if (!photo) {
 ---
 
 <Layout title={photo.title}>
-  <h2>{photo.title}</h2>
+  <TilteArea photo={photo} />
   <p>多分トリキバーガーを買って交差点で信号待ちしてた時</p>
-  <Photo
-    img={Photo1}
-    alt="夕暮れに赤くそびえたつ建設機械"
-    text="大きな機械が見えると撮りたくなっちゃう"
-  />
+  <Row>
+    <Photo
+      img={Photo1}
+      alt="夕暮れに赤くそびえたつ建設機械"
+      text="大きな機械が見えると撮りたくなっちゃう"
+    />
+  </Row>
 </Layout>
 
 <style lang="scss">
