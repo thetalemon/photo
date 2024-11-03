@@ -2,7 +2,6 @@
 import os
 import glob
 from PIL import Image
-from PIL.ExifTags import TAGS
 
 with open('env.txt', 'r') as f:
   targetDate = f.read().strip().split('=')[1]
