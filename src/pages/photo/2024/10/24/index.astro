@@ -1,0 +1,372 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import Photo from '@/components/Photo.astro'
+import TilteArea from '@/components/photo/TilteArea.astro'
+import Row from '@/components/Row.astro'
+import { getPhotoById } from '@/data/photo'
+import Photo1 from './_20241024_1.jpg'
+import Photo2 from './_20241024_2.jpg'
+import Photo3 from './_20241024_3.jpg'
+import Photo4 from './_20241024_4.jpg'
+import Photo6 from './_20241024_6.jpg'
+import Photo7 from './_20241024_7.jpg'
+import Photo8 from './_20241024_8.jpg'
+import Photo9 from './_20241024_9.jpg'
+import Photo10 from './_20241024_10.jpg'
+import Photo11 from './_20241024_11.jpg'
+import Photo12 from './_20241024_12.jpg'
+import Photo13 from './_20241024_13.jpg'
+import Photo14 from './_20241024_14.jpg'
+import Photo15 from './_20241024_15.jpg'
+import Photo16 from './_20241024_16.jpg'
+import Photo17 from './_20241024_17.jpg'
+import Photo18 from './_20241024_18.jpg'
+import Photo19 from './_20241024_19.jpg'
+import Photo20 from './_20241024_20.jpg'
+import Photo21 from './_20241024_21.jpg'
+import Photo22 from './_20241024_22.jpg'
+import Photo23 from './_20241024_23.jpg'
+import Photo24 from './_20241024_24.jpg'
+import Photo25 from './_20241024_25.jpg'
+import Photo26 from './_20241024_26.jpg'
+import Photo27 from './_20241024_27.jpg'
+import Photo28 from './_20241024_28.jpg'
+import Photo29 from './_20241024_29.jpg'
+import Photo30 from './_20241024_30.jpg'
+import Photo31 from './_20241024_31.jpg'
+import Photo32 from './_20241024_32.jpg'
+import Photo33 from './_20241024_33.jpg'
+import Photo35 from './_20241024_35.jpg'
+import Photo36 from './_20241024_36.jpg'
+import Photo37 from './_20241024_37.jpg'
+import Photo38 from './_20241024_38.jpg'
+import Photo41 from './_20241024_41.jpg'
+import Photo42 from './_20241024_42.jpg'
+import Photo43 from './_20241024_43.jpg'
+import Photo44 from './_20241024_44.jpg'
+import Photo45 from './_20241024_45.jpg'
+import Photo46 from './_20241024_46.jpg'
+import Photo47 from './_20241024_47.jpg'
+import Photo48 from './_20241024_48.jpg'
+import Photo49 from './_20241024_49.jpg'
+import Photo52 from './_20241024_52.jpg'
+import Photo53 from './_20241024_53.jpg'
+import Photo54 from './_20241024_54.jpg'
+import Photo55 from './_20241024_55.jpg'
+import Photo56 from './_20241024_56.jpg'
+import Photo57 from './_20241024_57.jpg'
+import Photo58 from './_20241024_58.jpg'
+import Photo59 from './_20241024_59.jpg'
+
+const photo = getPhotoById(4)
+if (!photo) {
+  return new Response(null, {
+    status: 404,
+    statusText: 'Not found',
+  })
+}
+
+const small = 350
+const big = 600
+---
+
+<Layout title={photo.title}>
+  <TilteArea photo={photo} />
+  <article>
+    <Row>
+      <Photo
+        img={Photo1}
+        alt="駐車場の看板と空"
+        text="ホテル出たらいい感じの空"
+      />
+      <Photo img={Photo2} alt="スタバと空" text="おはようスタバ" size={small} />
+      <Photo img={Photo3} alt="" text="スターフライヤーの広告かっこいい" />
+      <Photo
+        img={Photo4}
+        alt="小倉上ナイトウォーキングのポスター"
+        text="いいな～～と思いながらパシャリ。小倉城も行きたい"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo6}
+        alt="門司港駅への車窓"
+        text="車窓からの景色が赤レンガ"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo7}
+        alt="車止め（右）"
+        text="終点に来ると撮っちゃうやつ（右）"
+      />
+      <Photo
+        img={Photo8}
+        alt="車止め（左）"
+        text="終点に来ると撮っちゃうやつ（左）"
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo9}
+        alt="レトロな乗り越し精算機"
+        text="のりこし精算機もレトロ"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo10}
+        alt="門司港駅 駅構内"
+        text="改札出てもレトロ"
+        size={small}
+      />
+      <Photo
+        img={Photo11}
+        alt="門司港駅 きっぷ売り場"
+        text="きっぷ売り場もレトロ"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo img={Photo12} alt="門司港駅前" text="良い空！！" size={big} />
+      <Photo
+        img={Photo13}
+        alt="門司港駅"
+        text="門司港駅自体もやっぱりレトロ。"
+        size={big}
+      />
+    </Row>
+    <p class="center">
+      今もレトロ感ありますがこれは改修後の姿らしく、改修前はガチレトロだったらしいです。
+    </p>
+    <Row>
+      <Photo
+        img={Photo14}
+        alt="門司港 波止場"
+        text="キャプテンが足のせてるやつ。海特有のサビサビ。"
+        size={big}
+      />
+      <Photo
+        img={Photo15}
+        alt="門司港 港内の景色"
+        text="まるっこい船はHANARIAという遊覧船みたい"
+        size={big}
+      />
+    </Row>
+    <p class="center">
+      <a href="https://hanaria.jp/" target="_blank">HANARIA</a
+      >は洋上参拝クルーズとか色々やってるみたい。<br />
+      再訪する時はぜひ乗りたい。
+    </p>
+    <Row>
+      <Photo
+        img={Photo16}
+        alt="焼きカレー"
+        text="昼は門司港名物焼きカレー"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo img={Photo17} alt="送電線" text="送電線もいつも撮っちゃう" />
+      <Photo img={Photo18} alt="観覧車" text="対岸（山口側）の観覧車" />
+    </Row>
+    <Row>
+      <Photo img={Photo19} alt="門司港港内" text="港内を振り返り" />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo20}
+        alt="跳ね橋OPEN中（左）"
+        text="ちょうど跳ね橋が上がっていた"
+        size={big}
+      />
+      <Photo
+        img={Photo21}
+        alt="跳ね橋OPEN中（右）"
+        text="いい感じの空である"
+        size={big}
+      />
+    </Row>
+    <p class="center">
+      門司港展望台に行こうとしてたのですが跳ね橋が上がってしまったので遠回りすることに…………。
+      <br />
+      というわけで遠回りして行った展望台からの景色をお楽しみください
+    </p>
+    <Row>
+      <Photo img={Photo22} alt="街並み" text="ビルもあって山もあって良い景色" />
+      <Photo
+        img={Photo23}
+        alt="山口行きフグトンネル"
+        text="フグの口に車がどんどん吸い込まれていく…………！"
+      />
+      <Photo img={Photo24} alt="送電線" text="大好き送電線" />
+      <Photo img={Photo25} alt="世界平和パゴダ" text="世界平和パゴダ" />
+      <Photo
+        img={Photo26}
+        alt="アンテナっぽいもの"
+        text="送電線というか鉄塔全般が好き"
+      />
+      <Photo
+        img={Photo27}
+        alt="門司港駅（上から）"
+        text="上から見た駅って良いよね"
+      />
+      <Photo
+        img={Photo28}
+        alt="爆走する船"
+        text="船って線のない世界を爆走してるように見えて好き"
+      />
+      <Photo
+        img={Photo29}
+        alt="門司港展望台から見た山口県"
+        text="山口も未踏なのでいつか北九州→山口したい"
+      />
+      <Photo
+        img={Photo30}
+        alt="橋寄りの山口"
+        text="あの橋の左下あたりが壇ノ浦だそう"
+      />
+      <Photo
+        img={Photo31}
+        alt="港に大波が入ってくるのを防ぐやつだと思う"
+        text="こういう港にしかないもの好きです"
+      />
+      <Photo img={Photo32} alt="アンテナ" text="大好き鉄塔（N度目）" />
+    </Row>
+    <p class="center">
+      港の人間とか鉄塔関連業に就いてみたくなってきました
+      <br />
+      展望台料金は300円。上でおやつとかも食べれるので休憩にもよさそうです。
+      <br />
+      私は遠回りしてる途中で門司港クルーズの存在を知ったので展望台はササっと撮って降りました。
+      <br />
+      ここからは門司港クルーズの写真をお楽しみください！
+    </p>
+    <Row>
+      <Photo
+        img={Photo33}
+        alt="門司港の景色"
+        text="左下の赤いのに乗ります"
+        size={big}
+      />
+      <Photo img={Photo35} alt="船内の景色" text="くまちゃんが先に乗ってた" />
+      <Photo img={Photo36} alt="門司港展望台" text="さっきの展望台を海側から" />
+      <Photo img={Photo37} alt="魚っぽいホテル" text="魚がモデルらしいホテル" />
+      <Photo
+        img={Photo38}
+        alt="門司港展望台と立派な建物"
+        text="展望台の横にも立派な建物があります"
+      />
+      <Photo img={Photo41} alt="関門橋" text="関門橋" size={big} />
+      <Photo
+        img={Photo42}
+        alt="山口県"
+        text="あっちが山口。船でも行けるそうな"
+        size={big}
+      />
+      <Photo img={Photo43} alt="多分福岡" text="これは多分福岡側" />
+      <Photo img={Photo44} alt="福岡県" text="山口側は晴れだけど福岡側は曇り" />
+      <Photo
+        img={Photo45}
+        alt="船の背中と海"
+        text="こんな感じで船の甲板？みたいなところに出てます"
+      />
+      <Photo
+        img={Photo46}
+        alt="魚っぽいビル"
+        text="このお魚ビル、ホテルらしい"
+      />
+      <Photo img={Photo47} alt="船の背中と門司港" text="戻ってきた" />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo48}
+        alt="門司港駅前の噴水"
+        text="ぼーっとしてたら噴水はじまった"
+      />
+    </Row>
+    <p class="center">
+      そんなわけで門司港クルーズで門司港を〆て、旅の最終地点、博多に鈍行でどんぶらこ。
+    </p>
+    <Row>
+      <Photo
+        img={Photo49}
+        alt="博多駅"
+        text="これが博多ですか！！"
+        size={big}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo52}
+        alt="博多の街並み"
+        text="これが博多か～～と街中を散歩"
+      />
+      <Photo img={Photo53} alt="博多の街並み with 川" text="広い川" />
+      <Photo
+        img={Photo54}
+        alt="博多の街並み with 霧島"
+        text="霧島なところが九州感"
+      />
+      <Photo
+        img={Photo55}
+        alt="カラス"
+        text="東京ではめっきり見なくなりました"
+      />
+    </Row>
+    <p class="center">
+      リバークルーズに乗るか悩んだのですが、ちょうど17時で値段が倍だったので待ち合わせまで寝ました。
+    </p>
+    <Row>
+      <Photo
+        img={Photo56}
+        alt="ごまかんぱちとおいしいやつ"
+        text="ごまかんぱちおいしかった"
+      />
+      <Photo
+        img={Photo57}
+        alt="人生初もつ鍋"
+        text="もつ鍋おいしかった！！！また食べたい"
+        size={big}
+      />
+      <Photo
+        img={Photo58}
+        alt="八女茶アイス"
+        text="八女茶アイスもおいしかった。抹茶と緑茶の中間って感じ。"
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo59}
+        alt="マンハッタン"
+        text="コンビニを3件ハシゴして見つけたマンハッタン"
+      />
+    </Row>
+    <p class="center">
+      門司港→博多編でした。<br />
+      もつ鍋今まで食べる機会がなくて食べたことなかったんですがほんとにおいしかった！
+      <br />
+      マンハッタンは次の日の朝ごはんになったんですが、アラサーが朝に食べるパンじゃなかった。
+      <br />
+      パンっていうかドーナツのオールドファッションに近いかも。
+    </p>
+  </article>
+</Layout>
+
+<style lang="scss">
+  p {
+    line-height: 1.5rem;
+  }
+  .center {
+    text-align: center;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 3rem;
+  }
+</style>
