@@ -1,10 +1,27 @@
 ---
 import { myCopyLight } from '@/constants/constants'
+const isTop = Astro.url.pathname === '/'
 ---
 
+{
+  !isTop && (
+    <div class="toHome">
+      <p>
+        <a href="/">🏠</a>
+      </p>
+    </div>
+  )
+}
 <footer>{myCopyLight}</footer>
 
 <style lang="scss">
+  .toHome {
+    text-align: center;
+    margin: 1rem 0;
+    a {
+      border-bottom: none;
+    }
+  }
   footer {
     text-align: center;
     padding: 8px 0;

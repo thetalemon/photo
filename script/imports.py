@@ -22,7 +22,6 @@ sorted_files = sorted(targetFiles, key=natural_keys)
 with open('imports.txt', 'w') as f: 
   for i, file in enumerate(sorted_files):
     name = os.path.basename(file)
-    print(name)
     photoNumber = name.split('.')[0].split('_')[2]
     f.write('import Photo' + photoNumber + " from './" + name + "'\n")
 

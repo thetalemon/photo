@@ -1,0 +1,364 @@
+---
+// これはテンプレ
+import Layout from '@/layouts/Layout.astro'
+import Photo from '@/components/Photo.astro'
+import TilteArea from '@/components/photo/TilteArea.astro'
+import Row from '@/components/Row.astro'
+import { getPhotoById } from '@/data/photo'
+import Photo1 from './_20241025_1.jpg'
+import Photo2 from './_20241025_2.jpg'
+import Photo3 from './_20241025_3.jpg'
+import Photo4 from './_20241025_4.jpg'
+import Photo5 from './_20241025_5.jpg'
+import Photo6 from './_20241025_6.jpg'
+import Photo7 from './_20241025_7.jpg'
+import Photo8 from './_20241025_8.jpg'
+import Photo9 from './_20241025_9.jpg'
+import Photo10 from './_20241025_10.jpg'
+import Photo11 from './_20241025_11.jpg'
+import Photo12 from './_20241025_12.jpg'
+import Photo13 from './_20241025_13.jpg'
+import Photo14 from './_20241025_14.jpg'
+import Photo15 from './_20241025_15.jpg'
+import Photo16 from './_20241025_16.jpg'
+import Photo17 from './_20241025_17.jpg'
+import Photo18 from './_20241025_18.jpg'
+import Photo19 from './_20241025_19.jpg'
+import Photo20 from './_20241025_20.jpg'
+import Photo21 from './_20241025_21.jpg'
+import Photo22 from './_20241025_22.jpg'
+import Photo23 from './_20241025_23.jpg'
+import Photo24 from './_20241025_24.jpg'
+import Photo25 from './_20241025_25.jpg'
+import Photo26 from './_20241025_26.jpg'
+import Photo27 from './_20241025_27.jpg'
+import Photo28 from './_20241025_28.jpg'
+import Photo29 from './_20241025_29.jpg'
+import Photo30 from './_20241025_30.jpg'
+import Photo31 from './_20241025_31.jpg'
+import Photo32 from './_20241025_32.jpg'
+import Photo33 from './_20241025_33.jpg'
+import Photo34 from './_20241025_34.jpg'
+import Photo35 from './_20241025_35.jpg'
+import Photo36 from './_20241025_36.jpg'
+import Photo37 from './_20241025_37.jpg'
+import Photo38 from './_20241025_38.jpg'
+import Photo39 from './_20241025_39.jpg'
+import Photo40 from './_20241025_40.jpg'
+import Photo41 from './_20241025_41.jpg'
+import Photo42 from './_20241025_42.jpg'
+import Photo43 from './_20241025_43.jpg'
+import Photo44 from './_20241025_44.jpg'
+import Photo45 from './_20241025_45.jpg'
+import Photo46 from './_20241025_46.jpg'
+import Photo47 from './_20241025_47.jpg'
+import Photo48 from './_20241025_48.jpg'
+import Photo49 from './_20241025_49.jpg'
+import Photo50 from './_20241025_50.jpg'
+import Photo51 from './_20241025_51.jpg'
+import Photo52 from './_20241025_52.jpg'
+import Photo53 from './_20241025_53.jpg'
+import Photo54 from './_20241025_54.jpg'
+import Photo55 from './_20241025_55.jpg'
+import Photo56 from './_20241025_56.jpg'
+import Photo57 from './_20241025_57.jpg'
+import Photo58 from './_20241025_58.jpg'
+import Photo59 from './_20241025_59.jpg'
+
+const photo = getPhotoById(3)
+if (!photo) {
+  return new Response(null, {
+    status: 404,
+    statusText: 'Not found',
+  })
+}
+
+const small = 350
+const big = 600
+---
+
+<Layout title={photo.title}>
+  <TilteArea photo={photo} />
+  <article>
+    <Row>
+      <Photo
+        img={Photo1}
+        alt="カモメたち"
+        text="船着き場のカモメたち"
+        size={small}
+      />
+    </Row>
+    <p class="center">本日は朝から船にのってマリンワールド海の中道へ</p>
+    <Row>
+      <Photo
+        img={Photo3}
+        alt="マリンワールドのチケット"
+        text="行くぞマリンワールド！"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo4}
+        alt="ヤマノカミという魚"
+        text="ヤマノカミという魚だそう"
+        size={big}
+      />
+      <Photo img={Photo5} alt="カニ" text="カニ。かわいい。" size={big} />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo8}
+        alt="ケープペンギン2羽"
+        text="こっち見てる。かわいい。"
+      />
+      <Photo img={Photo9} alt="ケープペンギン1羽" text="前から見てもかわいい" />
+      <Photo
+        img={Photo10}
+        alt="ケープペンギン横"
+        text="横から見てもかわいい"
+        size={big}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo13}
+        alt="口あけてるアシカ"
+        text="エサをよこせえええしてるアシカ"
+      />
+      <Photo
+        img={Photo14}
+        alt="アザラシ"
+        text="アシカを後ろから見守るアザラシ"
+      />
+      <Photo
+        img={Photo15}
+        alt="多分上から見たアシカ"
+        text="上から見たアシカ"
+        size={big}
+      />
+      <Photo
+        img={Photo16}
+        alt="涼しい顔したアシカ"
+        text="なんか涼しい顔してるアシカ"
+        size={small}
+      />
+      <Photo
+        img={Photo17}
+        alt="水中アザラシたち"
+        text="水中アザラシ"
+        size={small}
+      />
+    </Row>
+    <p class="center">ちょうどペンギンショーの遭遇したので見ていくことに</p>
+    <Row>
+      <Photo img={Photo18} alt="テクテクペンギン" text="エサについていく" />
+      <Photo
+        img={Photo21}
+        alt="ペンギン2羽"
+        text="エサまだか？まだか？してる2羽"
+      />
+      <Photo
+        img={Photo22}
+        alt="エサについていく4羽のペンギン"
+        text="4羽揃って餌についてく"
+      />
+      <Photo
+        img={Photo23}
+        alt="飼育員を囲む4羽のペンギン"
+        text="4羽に囲まれた飼育員さん…………"
+      />
+      <Photo
+        img={Photo25}
+        alt="首をのばしたペンギン"
+        text="首を長くしてエサを待ってる"
+      />
+      <Photo img={Photo26} alt="首を傾げたペンギン" text="きょるん" />
+    </Row>
+    <p class="center">
+      ペンギンの次はイルカもショーやるよ～！と言われたのでイルカも見ていく。
+    </p>
+    <Row>
+      <Photo img={Photo27} alt="口を開いたバンドウイルカ" text="おくちあーん" />
+      <Photo
+        img={Photo28}
+        alt="飼育員の手に触れるバンドウイルカ"
+        text="おててたっち！"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo29}
+        alt="飼育員の手に触れるカマイルカ"
+        text="カマイルカもおててたっち！"
+      />
+      <Photo
+        img={Photo30}
+        alt="カマイルカたち"
+        text="カマイルカ、まるっこくてかわいい"
+        size={small}
+      />
+    </Row>
+    <p class="center">ペンギン・イルカを堪能して大水槽へ。でかい。</p>
+    <Row>
+      <Photo img={Photo32} alt="サメ。多分シロワニ" text="ド迫力" />
+      <Photo img={Photo33} alt="エイ" text="エイもいる" />
+      <Photo img={Photo34} alt="横エイ" text="横向きだとアラジンの絨毯みたい" />
+    </Row>
+    <p class="center">
+      なんでエイって普通に泳げるのに水槽に張り付いて落ちていくんでしょうね
+    </p>
+    <Row>
+      <Photo
+        img={Photo35}
+        alt="でかいカニ"
+        text="カニの足下の魚、微動だにしない"
+        size={big}
+      />
+    </Row>
+    <Row>
+      <Photo img={Photo36} alt="スナメリ" text="スナメリもかわいい" />
+    </Row>
+    <p class="center">
+      スナメリもアザラシも結構粘ったんですが、水中で動き回る子は撮るの難しいです
+    </p>
+    <Row>
+      <Photo img={Photo37} alt="タコクラゲ" text="ふわふわ" />
+      <Photo img={Photo38} alt="タコクラゲ" text="ぷかぷか" />
+      <Photo img={Photo41} alt="アカクラゲ" text="ゆら～り" />
+      <Photo img={Photo42} alt="たぶんカブトクラゲ" text="幻想的" />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo43}
+        alt="メガネモチノウオというらしい"
+        text="ねむたげに見える"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo44}
+        alt="青と緑の涼しげなドリンク"
+        text="緑はメロンソーダ。青はなんだっけ………。"
+        size={small}
+      />
+      <Photo
+        img={Photo45}
+        alt="ボロネーゼ"
+        text="魚メニュー少なかったので欲望のままボロネーゼ"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo46}
+        alt="レストランにいた魚"
+        text="レストランの水槽の子"
+      />
+    </Row>
+    <p class="center">そしてお目当てのラッコ！！！</p>
+    <Row>
+      <Photo
+        img={Photo47}
+        alt="誓いけど見切れてるラッコ"
+        text="ラッコ！ふわふわ！"
+      />
+      <Photo
+        img={Photo48}
+        alt="ちょっと遠いラッコ"
+        text="ラッコむずかしい！！"
+      />
+      <Photo
+        img={Photo49}
+        alt="ちょっと見切れてるラッコ"
+        text="ラッコっぽいポーズ"
+      />
+    </Row>
+    <p class="center">ラッコ結構、動き回るので撮影難度は高めでした………</p>
+    <Row>
+      <Photo
+        img={Photo50}
+        alt="パフェ"
+        text="奥でハナゴンドウがタテになってる"
+      />
+    </Row>
+    <p class="center">
+      ちなみにこのパフェ焼き芋がまるまる1本入ってる。重い。
+      <br />
+      おなかも満ちたので帰ります。
+    </p>
+    <Row>
+      <Photo
+        img={Photo51}
+        alt="マリンワールド出てすぐの夕焼け"
+        text="帰る頃には夕暮れに"
+      />
+      <Photo
+        img={Photo52}
+        alt="マリンワールド出てすぐの夏っぽい木"
+        text="夏っぽい木も生えてます"
+      />
+      <Photo
+        img={Photo53}
+        alt="マリンワールド 遠景"
+        text="行きはちゃんと見なかった施設全貌"
+      />
+      <Photo
+        img={Photo54}
+        alt="マリンワールド入口のイルカ像"
+        text="行きに見かけた記憶のないイルカ像"
+        size={small}
+      />
+    </Row>
+    <p class="center">帰りも船です。乗船時間は20分くらい。景色は普通。</p>
+    <Row>
+      <Photo
+        img={Photo55}
+        alt="乗船券販売所"
+        text="ももち行き。名前がかわいい。"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo img={Photo56} alt="福岡タワー" text="福岡タワー" size={small} />
+      <Photo
+        img={Photo57}
+        alt="ももちウォーターフロント"
+        text="船着き場周辺にはご飯やさんとかもあります"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo59}
+        alt="ももちウォーターフロント 遠景"
+        text="ぐっばいももち。"
+        size={big}
+      />
+    </Row>
+    <p class="center">
+      マリンワールド海の中道編、終わり。<br />
+      ラッコやっと会えた！良かった！<br />
+      1番印象に残ったのはペンギンの丘で、丘のまわりをぐるっとできるので上から下からペンギンが見れます。
+      <br />
+      植え込みの下に隠れてる子とかも居て、見てて楽しかったです。
+    </p>
+  </article>
+</Layout>
+
+<style lang="scss">
+  p {
+    line-height: 1.5rem;
+  }
+  .center {
+    text-align: center;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 3rem;
+  }
+</style>

@@ -40,6 +40,9 @@ const url = getUrlByPhoto(photographingDate)
 <style lang="scss">
   a {
     color: #3c3c3c;
+    &:hover {
+      opacity: 1;
+    }
   }
 
   .card {
@@ -61,7 +64,8 @@ const url = getUrlByPhoto(photographingDate)
         overflow: hidden;
         .eyecatch {
           transition: 0.5s all;
-          overflow: hidden;
+          width: 100%;
+          height: auto;
         }
       }
       .title {
@@ -69,10 +73,11 @@ const url = getUrlByPhoto(photographingDate)
         text-align: center;
         font-size: 1.3rem;
         font-weight: bold;
+        line-height: 1.5;
       }
       &:hover {
         .eyecatch {
-          transform: scale(1.3, 1.3);
+          transform: scale(1.25, 1.25);
         }
       }
     }

@@ -5,6 +5,7 @@ import photo20200105 from '@/pages/photo/2022/1/5/_1.jpg'
 import photo202401022 from '@/pages/photo/2024/10/22/_20241022_14.jpg'
 import photo202401023 from '@/pages/photo/2024/10/23/_20241023_13.jpg'
 import photo202401024 from '@/pages/photo/2024/10/24/_20241024_38.jpg'
+import photo202401025 from '@/pages/photo/2024/10/25/_20241025_21.jpg'
 
 export type Photo = {
   id: number
@@ -20,7 +21,16 @@ export type Photo = {
 export const PhotoList: Photo[] = [
   {
     id: 4,
-    title: '福岡旅行 2日目',
+    title: '福岡旅行 3日目 | マリンワールド海の中道',
+    eyecatch: photo202401025,
+    photographingDate: new Date('2024-10-25'),
+    publicationDate: new Date('2024-11-4'),
+    tagList: [TagList.travel, TagList.fukuoka, TagList.suizokukan],
+    isNew: true,
+  },
+  {
+    id: 4,
+    title: '福岡旅行 2日目 | 門司港レトロ',
     eyecatch: photo202401024,
     photographingDate: new Date('2024-10-24'),
     publicationDate: new Date('2024-11-3'),
@@ -29,7 +39,7 @@ export const PhotoList: Photo[] = [
   },
   {
     id: 3,
-    title: '福岡旅行 1日目',
+    title: '福岡旅行 1日目 | 小倉',
     eyecatch: photo202401023,
     photographingDate: new Date('2024-10-23'),
     publicationDate: new Date('2024-11-3'),
@@ -38,7 +48,7 @@ export const PhotoList: Photo[] = [
   },
   {
     id: 2,
-    title: '福岡旅行 0日目',
+    title: '福岡旅行 0日目 | 横須賀からフェリーに乗る',
     eyecatch: photo202401022,
     photographingDate: new Date('2024-10-22'),
     publicationDate: new Date('2024-10-31'),

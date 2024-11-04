@@ -12,6 +12,7 @@ export const TagList: Tags = {
   ferry: 'フェリー',
   yokosuka: '横須賀',
   fukuoka: '福岡',
+  suizokukan: '水族館',
 }
 
 export const getTagByValue = (value: string) => {
