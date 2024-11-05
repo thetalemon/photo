@@ -5,4 +5,4 @@ export const myName = 'manasas'
 export const mySiteName = 'とあるアルバム'
 export const mySiteDefaultDescription = '北極の倉庫に眠るアルバムたち'
 export const myCopyLight = `© 2024 ${myName}`
-export const myDefaultOgpImage = `${myUrl}/defaultOgp.png`
+export const myDefaultOgpImage = `${myUrl}/ogp.png`

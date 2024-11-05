@@ -2,18 +2,21 @@
 import Head from '@/layouts/components/Head.astro'
 import Header from '@/components/Header.astro'
 import Footer from '@/components/Footer.astro'
+import { myUrl, myDefaultOgpImage } from '@/constants/constants'
 
 export interface Props {
   title?: string
-  ogImage?: string
+  ogImage?: ImageMetadata
 }
 
 const { title, ogImage } = Astro.props
+
+const ogpPath = ogImage ? `${myUrl}${ogImage.src}` : myDefaultOgpImage
 ---
 
 <!doctype html>
 <html lang="ja">
-  <Head title={title} ogImage={ogImage} />
+  <Head title={title} ogImage={ogpPath} />
   <body>
     <Header />
     <main>
