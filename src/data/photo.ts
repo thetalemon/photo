@@ -6,6 +6,7 @@ import photo202401022 from '@/pages/photo/2024/10/22/_20241022_14.jpg'
 import photo202401023 from '@/pages/photo/2024/10/23/_20241023_13.jpg'
 import photo202401024 from '@/pages/photo/2024/10/24/_20241024_38.jpg'
 import photo202401025 from '@/pages/photo/2024/10/25/_20241025_21.jpg'
+import photo202401026 from '@/pages/photo/2024/10/26/_20241026_13.jpg'
 
 export type Photo = {
   id: number
@@ -20,7 +21,16 @@ export type Photo = {
 
 export const PhotoList: Photo[] = [
   {
-    id: 4,
+    id: 6,
+    title: '福岡旅行 4日目 | 帰路',
+    eyecatch: photo202401026,
+    photographingDate: new Date('2024-10-26'),
+    publicationDate: new Date('2024-11-9'),
+    tagList: [TagList.travel, TagList.fukuoka],
+    isNew: true,
+  },
+  {
+    id: 5,
     title: '福岡旅行 3日目 | マリンワールド海の中道',
     eyecatch: photo202401025,
     photographingDate: new Date('2024-10-25'),

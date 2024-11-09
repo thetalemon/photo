@@ -1,0 +1,111 @@
+---
+// これはテンプレ
+import Layout from '@/layouts/Layout.astro'
+import Photo from '@/components/Photo.astro'
+import TilteArea from '@/components/photo/TilteArea.astro'
+import Row from '@/components/Row.astro'
+import { getPhotoById } from '@/data/photo'
+import Photo3 from './_20241026_3.jpg'
+import Photo4 from './_20241026_4.jpg'
+import Photo5 from './_20241026_5.jpg'
+import Photo6 from './_20241026_6.jpg'
+import Photo7 from './_20241026_7.jpg'
+import Photo8 from './_20241026_8.jpg'
+import Photo9 from './_20241026_9.jpg'
+import Photo11 from './_20241026_11.jpg'
+import Photo12 from './_20241026_12.jpg'
+import Photo13 from './_20241026_13.jpg'
+import Photo15 from './_20241026_15.jpg'
+
+const photo = getPhotoById(6)
+if (!photo) {
+  return new Response(null, {
+    status: 404,
+    statusText: 'Not found',
+  })
+}
+
+const small = 350
+const big = 600
+---
+
+<Layout title={photo.title}>
+  <TilteArea photo={photo} />
+  <article>
+    <p class="center">福岡から帰る時間だ…………</p>
+    <Row>
+      <Photo
+        img={Photo3}
+        alt="展望デッキからの景色"
+        text="展望デッキから眺めまして"
+        size={big}
+      />
+    </Row>
+    <Row>
+      <Photo img={Photo4} alt="ANAの群れ" text="ANAの群れ" />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo5}
+        alt="明太子のANAの広告"
+        text="かわいい明太子広告（買ってない）"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo6}
+        alt="飛行機の窓の外、peach機が見える"
+        text="隣はpeach"
+      />
+      <Photo
+        img={Photo7}
+        alt="飛行機の窓の外、Jetstar機が見える"
+        text="peach行っちゃったので隣はjetstarになった"
+      />
+    </Row>
+    <Row>
+      <Photo img={Photo8} alt="JAL機の群れ" text="JALの群れ" />
+      <Photo
+        img={Photo9}
+        alt="スターフライヤー機"
+        text="スターフライヤー機とすれ違う"
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo11}
+        alt="空の上の景色"
+        text="向こうに高い山がある気がする"
+      />
+      <Photo img={Photo12} alt="雲の上" text="雲の上はいつでも快晴" />
+      <Photo img={Photo13} alt="雲の上の夕暮れ" text="日が暮れてきた" />
+    </Row>
+    <p class="center">
+      窓の外の景色が見たいので夜便ではなく夕方便を選ぶことが多いです。
+    </p>
+    <Row>
+      <Photo img={Photo15} alt="おみやげうまかっちゃん" text="まだ食べてない" />
+    </Row>
+    <p class="center">
+      これにて福岡旅行、終了～～！です。<br />
+      初福岡、友人アテンドもあってだいぶ楽しませていただきました。<br />
+      大宰府とか行きたいところまだまだ残ってるのでまた行きたいです。
+    </p>
+  </article>
+</Layout>
+
+<style lang="scss">
+  p {
+    line-height: 1.5rem;
+  }
+  .center {
+    text-align: center;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 3rem;
+  }
+</style>
