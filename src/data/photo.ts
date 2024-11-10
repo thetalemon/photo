@@ -7,6 +7,7 @@ import photo202401023 from '@/pages/photo/2024/10/23/_20241023_13.jpg'
 import photo202401024 from '@/pages/photo/2024/10/24/_20241024_38.jpg'
 import photo202401025 from '@/pages/photo/2024/10/25/_20241025_21.jpg'
 import photo202401026 from '@/pages/photo/2024/10/26/_20241026_13.jpg'
+import photo202401108 from '@/pages/photo/2024/11/08/_20241108_2.jpg'
 
 export type Photo = {
   id: number
@@ -20,6 +21,15 @@ export type Photo = {
 }
 
 export const PhotoList: Photo[] = [
+  {
+    id: 7,
+    title: '川越～大宮散歩',
+    eyecatch: photo202401108,
+    photographingDate: new Date('2024-11-08'),
+    publicationDate: new Date('2024-11-10'),
+    tagList: [TagList.sanpo, TagList.saitama, TagList.kanto],
+    isNew: true,
+  },
   {
     id: 6,
     title: '福岡旅行 4日目 | 帰路',
@@ -64,7 +74,6 @@ export const PhotoList: Photo[] = [
     publicationDate: new Date('2024-10-31'),
     lastUpdateDate: new Date('2024-11-3'),
     tagList: [TagList.travel, TagList.ferry, TagList.yokosuka],
-    isNew: true,
   },
   {
     id: 1,
@@ -73,7 +82,6 @@ export const PhotoList: Photo[] = [
     photographingDate: new Date('2022-1-5'),
     publicationDate: new Date('2024-10-27'),
     tagList: [TagList.tokyo, TagList.Oimachi, TagList.kenki],
-    isNew: true,
   },
 ]
 

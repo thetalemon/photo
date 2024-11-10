@@ -1,0 +1,200 @@
+---
+// これはテンプレ
+import Layout from '@/layouts/Layout.astro'
+import Photo from '@/components/Photo.astro'
+import TilteArea from '@/components/photo/TilteArea.astro'
+import Row from '@/components/Row.astro'
+import { getPhotoById } from '@/data/photo'
+import Photo1 from './_20241108_1.jpg'
+import Photo2 from './_20241108_2.jpg'
+import Photo3 from './_20241108_3.jpg'
+import Photo4 from './_20241108_4.jpg'
+import Photo6 from './_20241108_6.jpg'
+import Photo7 from './_20241108_7.jpg'
+import Photo8 from './_20241108_8.jpg'
+import Photo9 from './_20241108_9.jpg'
+import Photo12 from './_20241108_12.jpg'
+import Photo13 from './_20241108_13.jpg'
+import Photo15 from './_20241108_15.jpg'
+import Photo16 from './_20241108_16.jpg'
+import Photo18 from './_20241108_18.jpg'
+import Photo19 from './_20241108_19.jpg'
+import Photo21 from './_20241108_21.jpg'
+import Photo22 from './_20241108_22.jpg'
+import Photo23 from './_20241108_23.jpg'
+import Photo24 from './_20241108_24.jpg'
+import Photo25 from './_20241108_25.jpg'
+import Photo26 from './_20241108_26.jpg'
+import Photo27 from './_20241108_27.jpg'
+import Photo28 from './_20241108_28.jpg'
+import Photo29 from './_20241108_29.jpg'
+import Photo30 from './_20241108_30.jpg'
+import Photo31 from './_20241108_31.jpg'
+import Photo32 from './_20241108_32.jpg'
+import Photo33 from './_20241108_33.jpg'
+import Photo34 from './_20241108_34.jpg'
+import Photo35 from './_20241108_35.jpg'
+
+const photo = getPhotoById(7)
+if (!photo) {
+  return new Response(null, {
+    status: 404,
+    statusText: 'Not found',
+  })
+}
+
+const small = 350
+const big = 600
+---
+
+<Layout title={photo.title}>
+  <TilteArea photo={photo} />
+  <article>
+    <Row>
+      <Photo
+        img={Photo1}
+        alt="うどんと角煮"
+        text="はじまりはうどんから"
+        size={small}
+      />
+    </Row>
+    <p class="center">
+      <a
+        href="https://tabelog.com/saitama/A1103/A110303/11003217/"
+        target="_blank"
+      >
+        うんとん処 春・夏・秋・冬
+      </a>という路地に入った隠れたお店。すぐ満員になったので人気店っぽい。
+    </p>
+    <Row>
+      <Photo
+        img={Photo2}
+        alt="川越氷川神社の鯛"
+        text="そして川越氷川神社へ"
+        size={big}
+      />
+      <Photo img={Photo6} alt="菊の紋の燈篭" text="燈篭（左）" />
+      <Photo img={Photo7} alt="雲の紋の燈篭" text="燈篭（右）" />
+      <Photo img={Photo8} alt="燈篭（下）" text="下も綺麗" />
+      <Photo img={Photo9} alt="川越氷川神社の鯛" text="イラストがかわいい" />
+    </Row>
+    <Row>
+      <Photo img={Photo3} alt="オレンジの花" text="神社裏にも来てみました" />
+      <Photo img={Photo4} alt="川" text="神社裏の川もすっかり冬" />
+    </Row>
+    <Row>
+      <Photo img={Photo12} alt="丸太" text="こういうの好き" />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo13}
+        alt="かわいい像"
+        text="かわいいのがこっちを見てる"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo15}
+        alt="だんごの像（左側）"
+        text="だんごっぽい像"
+        size={small}
+      />
+      <Photo
+        img={Photo16}
+        alt="だんごの像（右側）"
+        text="反対側見てもかわいい"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo19}
+        alt="フクロウの像"
+        text="同じ作家さんだろうか"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo img={Photo18} alt="和風スタバ" text="和スタバ" />
+    </Row>
+    <Row>
+      <Photo img={Photo22} alt="川越八幡宮" text="綺麗な鳥居" size={big} />
+      <Photo img={Photo23} alt="花手水" text="花手水いいよね" />
+      <Photo img={Photo24} alt="稲" text="きれいに実ってる" />
+    </Row>
+    <p class="center">
+      川越、食べ歩きできるおいしそうなのもいっぱいあったんですが、
+      <br />
+      角煮とうどんセットの後には何も入らなかった。
+      <br />
+      そんなわけで川越を後にして大宮へ。
+    </p>
+    <Row>
+      <Photo img={Photo25} alt="大きな鳥居" text="大宮の氷川神社" size={big} />
+
+      <Photo img={Photo26} alt="池に映る景色" text="池も綺麗" />
+      <Photo
+        img={Photo27}
+        alt="池の景色"
+        text="ちょうど神々しくなっている銀杏"
+      />
+      <Photo img={Photo29} alt="鴨" text="鴨です" />
+      <Photo img={Photo31} alt="月" text="月です" />
+      <Photo
+        img={Photo32}
+        alt="カラス"
+        text="神社には烏がいることが多い気がする"
+      />
+      <Photo img={Photo33} alt="月と森と鳥" text="そろそろ散歩も終わり" />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo34}
+        alt="ジンギスカン"
+        text="ジンギスカンだ！！"
+        size={small}
+      />
+      <Photo
+        img={Photo35}
+        alt="ひつじアイス"
+        text="ひつじアイスはさっぱり系だった"
+        size={small}
+      />
+    </Row>
+    <p class="center">
+      ジンギスカンは
+      <a
+        href="https://tabelog.com/saitama/A1101/A110101/11001594/"
+        target="_blank"
+      >
+        生ラムジンギスカン 3匹のひつじ
+      </a>
+      にて。<br />
+      初ジンギスカンだったんですが最高に美味しかった！
+      <br />
+      豚肉と牛肉の中間って感じ。
+    </p>
+    <p class="center">
+      川越氷川神社 → 川越八幡宮 →武蔵一宮
+      氷川神社（大宮）というルートの神社巡りでした。
+      <br />
+      川越だけでも充分1日過ごせそうだったのでまた川越したい。
+    </p>
+  </article>
+</Layout>
+
+<style lang="scss">
+  p {
+    line-height: 1.5rem;
+  }
+  .center {
+    text-align: center;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 3rem;
+  }
+</style>
