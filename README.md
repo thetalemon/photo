@@ -1,3 +1,3 @@
 # photo
 
-- まなさすの写真サイトになる予定
+- [まなさすの写真サイト](https://photo.manasas.dev/)
