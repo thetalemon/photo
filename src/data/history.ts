@@ -24,6 +24,11 @@ const generateDateRelateData = (date: Date) => {
 
 export const HistroyList: History[] = [
   {
+    title: '大阪・神戸 1日目 | 天王寺動物園',
+    content: `<p><a href="${generateAbsoluteUrl('/photo/2024/11/22')}">大阪・神戸 1日目 | 天王寺動物園</a>をアップしました。</p>`,
+    ...generateDateRelateData(new Date('2024-12-1')),
+  },
+  {
     title: '川越～大宮散歩をアップしました',
     content: `<p><a href="${generateAbsoluteUrl('/photo/2024/11/08')}">川越～大宮散歩</a>をアップしました。</p>`,
     ...generateDateRelateData(new Date('2024-11-10')),

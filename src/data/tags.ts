@@ -13,9 +13,13 @@ export const TagList: Tags = {
   yokosuka: '横須賀',
   fukuoka: '福岡',
   suizokukan: '水族館',
+  zoo: '動物園',
   saitama: '埼玉',
   sanpo: '散歩',
   kanto: '関東',
+  kinki: '近畿',
+  osaka: '大阪',
+  kobe: '神戸',
 }
 
 export const getTagByValue = (value: string) => {

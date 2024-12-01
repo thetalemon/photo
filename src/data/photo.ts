@@ -8,6 +8,7 @@ import photo202401024 from '@/pages/photo/2024/10/24/_20241024_38.jpg'
 import photo202401025 from '@/pages/photo/2024/10/25/_20241025_21.jpg'
 import photo202401026 from '@/pages/photo/2024/10/26/_20241026_13.jpg'
 import photo202401108 from '@/pages/photo/2024/11/08/_20241108_2.jpg'
+import Photo20241122 from '@/pages/photo/2024/11/22/_20241122_16.jpg'
 
 export type Photo = {
   id: number
@@ -21,6 +22,21 @@ export type Photo = {
 }
 
 export const PhotoList: Photo[] = [
+  {
+    id: 8,
+    title: '大阪・神戸 1日目 | 天王寺動物園',
+    eyecatch: Photo20241122,
+    photographingDate: new Date('2024-11-22'),
+    publicationDate: new Date('2024-12-1'),
+    tagList: [
+      TagList.travel,
+      TagList.kinki,
+      TagList.osaka,
+      TagList.kobe,
+      TagList.zoo,
+    ],
+    isNew: true,
+  },
   {
     id: 7,
     title: '川越～大宮散歩',
@@ -37,7 +53,6 @@ export const PhotoList: Photo[] = [
     photographingDate: new Date('2024-10-26'),
     publicationDate: new Date('2024-11-9'),
     tagList: [TagList.travel, TagList.fukuoka],
-    isNew: true,
   },
   {
     id: 5,
@@ -46,7 +61,6 @@ export const PhotoList: Photo[] = [
     photographingDate: new Date('2024-10-25'),
     publicationDate: new Date('2024-11-4'),
     tagList: [TagList.travel, TagList.fukuoka, TagList.suizokukan],
-    isNew: true,
   },
   {
     id: 4,
@@ -55,7 +69,6 @@ export const PhotoList: Photo[] = [
     photographingDate: new Date('2024-10-24'),
     publicationDate: new Date('2024-11-3'),
     tagList: [TagList.travel, TagList.fukuoka],
-    isNew: true,
   },
   {
     id: 3,
@@ -64,7 +77,6 @@ export const PhotoList: Photo[] = [
     photographingDate: new Date('2024-10-23'),
     publicationDate: new Date('2024-11-3'),
     tagList: [TagList.travel, TagList.fukuoka],
-    isNew: true,
   },
   {
     id: 2,

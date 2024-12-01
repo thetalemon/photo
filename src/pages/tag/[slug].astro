@@ -16,6 +16,17 @@ const tagName = TagList[tag]
 ---
 
 <Layout title={tagName}>
-  タグ: {tagName}
+  <h2>タグ #{tagName}</h2>
   <CardList list={list} />
 </Layout>
+
+<style lang="scss">
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+    margin: 2rem 0 1rem 0;
+    // border-bottom: #ccc 1px solid;
+    padding: 0 0 0.5rem 0.5rem;
+  }
+</style>

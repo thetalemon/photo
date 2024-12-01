@@ -1,0 +1,334 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import Photo from '@/components/Photo.astro'
+import TilteArea from '@/components/photo/TilteArea.astro'
+import Row from '@/components/Row.astro'
+import { getPhotoById } from '@/data/photo'
+import Photo1 from './_20241122_1.jpg'
+import Photo2 from './_20241122_2.jpg'
+import Photo3 from './_20241122_3.jpg'
+import Photo4 from './_20241122_4.jpg'
+import Photo5 from './_20241122_5.jpg'
+import Photo6 from './_20241122_6.jpg'
+import Photo7 from './_20241122_7.jpg'
+import Photo8 from './_20241122_8.jpg'
+import Photo9 from './_20241122_9.jpg'
+import Photo10 from './_20241122_10.jpg'
+import Photo11 from './_20241122_11.jpg'
+import Photo12 from './_20241122_12.jpg'
+import Photo13 from './_20241122_13.jpg'
+import Photo14 from './_20241122_14.jpg'
+import Photo15 from './_20241122_15.jpg'
+import Photo16 from './_20241122_16.jpg'
+import Photo17 from './_20241122_17.jpg'
+import Photo18 from './_20241122_18.jpg'
+import Photo19 from './_20241122_19.jpg'
+import Photo20 from './_20241122_20.jpg'
+import Photo21 from './_20241122_21.jpg'
+import Photo22 from './_20241122_22.jpg'
+import Photo23 from './_20241122_23.jpg'
+import Photo24 from './_20241122_24.jpg'
+import Photo25 from './_20241122_25.jpg'
+import Photo26 from './_20241122_26.jpg'
+import Photo27 from './_20241122_27.jpg'
+import Photo28 from './_20241122_28.jpg'
+import Photo29 from './_20241122_29.jpg'
+import Photo30 from './_20241122_30.jpg'
+import Photo31 from './_20241122_31.jpg'
+import Photo32 from './_20241122_32.jpg'
+import Photo33 from './_20241122_33.jpg'
+import Photo34 from './_20241122_34.jpg'
+import Photo35 from './_20241122_35.jpg'
+import Photo36 from './_20241122_36.jpg'
+import Photo37 from './_20241122_37.jpg'
+import Photo38 from './_20241122_38.jpg'
+import Photo39 from './_20241122_39.jpg'
+import Photo40 from './_20241122_40.jpg'
+import Photo41 from './_20241122_41.jpg'
+import Photo42 from './_20241122_42.jpg'
+import Photo43 from './_20241122_43.jpg'
+import Photo44 from './_20241122_44.jpg'
+import Photo45 from './_20241122_45.jpg'
+import Photo46 from './_20241122_46.jpg'
+import Photo47 from './_20241122_47.jpg'
+import Photo48 from './_20241122_48.jpg'
+import Photo49 from './_20241122_49.jpg'
+import Photo50 from './_20241122_50.jpg'
+import Photo51 from './_20241122_51.jpg'
+import Photo52 from './_20241122_52.jpg'
+import Photo53 from './_20241122_53.jpg'
+import Photo54 from './_20241122_54.jpg'
+import Photo55 from './_20241122_55.jpg'
+import Photo56 from './_20241122_56.jpg'
+
+const photo = getPhotoById(8)
+if (!photo) {
+  return new Response(null, {
+    status: 404,
+    statusText: 'Not found',
+  })
+}
+
+const small = 350
+const big = 600
+---
+
+<Layout title={photo.title} ogImage={photo.eyecatch}>
+  <TilteArea photo={photo} />
+  <article>
+    <p class="center">
+      人に会いに神戸に行くのですが、神戸は何度か行ってるので大阪経由で行きます。
+      <br />
+      というわけで羽田から新大阪へ。
+    </p>
+    <Row>
+      <Photo
+        img={Photo1}
+        alt="朝の駐機場"
+        text="ド朝がはやかったのでド朝にしました。ねっむい。"
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo2}
+        alt="飛行機の窓から見える景色はまだ関東"
+        text="さよなら東京"
+      />
+    </Row>
+    <Row>
+      <Photo img={Photo3} alt="親子サンドとおにぎり" text="朝食" />
+    </Row>
+    <Row>
+      <Photo img={Photo4} alt="富士山" text="富士山だ！！！" size={big} />
+    </Row>
+    <p class="center">
+      飛行機で南には何度も行ってるはずなんですが、ここまで綺麗に富士山を見たのは初めてな気がします。
+    </p>
+    <Row>
+      <Photo img={Photo5} alt="愛知県っぽい" text="多分知多半島" size={small} />
+      <Photo img={Photo6} alt="山間に雲" text="谷ってくもりの日多いのかな" />
+      <Photo
+        img={Photo7}
+        alt="兵庫県の沼島っぽい"
+        text="島が見える！と撮影したら兵庫県の沼島という島みたい。"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo img={Photo8} alt="新大阪に着陸するシーン" text="着陸ですわ！" />
+    </Row>
+    <Row>
+      <Photo img={Photo9} alt="半分が透明な広告" text="大阪は広告もユニーク" />
+    </Row>
+    <p class="center">まずは天王寺動物園へ。</p>
+    <Row>
+      <Photo img={Photo10} alt="カメ" text="カメにはじまり……" />
+      <Photo img={Photo11} alt="多分すっぽん" text="すっぽんが鼻をぐいぐい" />
+      <Photo img={Photo12} alt="カバ" text="飛び跳ねない方のカバ" />
+      <Photo img={Photo13} alt="サイ" text="サイ。強そう。" />
+      <Photo
+        img={Photo14}
+        alt="キリンの多分親子"
+        text="なぜか子の尻に頭をすりつける親"
+      />
+    </Row>
+    <Row>
+      <Photo img={Photo15} alt="起きてるメスライオン" text="ライオンだ！！" />
+      <Photo img={Photo16} alt="起きてるメスライオン" text="凛々しい" />
+      <Photo img={Photo19} alt="寝るメスライオン" text="こちらはむにゃむにゃ" />
+      <Photo img={Photo17} alt="寝るメスライオン" text="こっち見た………！？" />
+      <Photo img={Photo18} alt="オスライオン" text="オスはふわふわ" />
+    </Row>
+    <Row>
+      <Photo img={Photo20} alt="フクロウ" text="メガネフクロウというらしい" />
+      <Photo img={Photo22} alt="これも多分ワシ" text="ワシ" />
+      <Photo img={Photo23} alt="正面ワシ" text="正面もかっこいい" />
+    </Row>
+    <Row>
+      <Photo img={Photo25} alt="アナグマ" text="この子はアナグマ" />
+    </Row>
+    <Row>
+      <Photo img={Photo26} alt="タヌキのふわふわ" text="このふわふわは…………" />
+      <Photo img={Photo27} alt="寝タヌキ" text="ガチ寝タヌキ" />
+      <Photo img={Photo24} alt="タヌキの体重測定の方法" text="かわいい" />
+      <Photo img={Photo29} alt="タヌキ" text="昼タヌキ" />
+    </Row>
+    <p class="center">
+      タヌキ狙いだったので粘ったんですが、上手く撮れず。無念…………。
+    </p>
+    <Row>
+      <Photo
+        img={Photo30}
+        alt="ジャガーのはず"
+        text="ライオンとは違う凛々しさ"
+      />
+      <Photo img={Photo31} alt="シロフクロウ" text="某映画で見る子" />
+      <Photo img={Photo32} alt="オオカミ" text="オオカミは歩き回ってました" />
+      <Photo
+        img={Photo33}
+        alt="レッサーパンダ"
+        text="この日はレッサーパンダもすやすや"
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo34}
+        alt="通天閣"
+        text="動物園から見える通天閣"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo35}
+        alt="ペンギン立ち入り禁止看板"
+        text="看板かわいい"
+        size={small}
+      />
+      <Photo
+        img={Photo39}
+        alt="アシカ立ち入り禁止看板"
+        text="こっちもかわいい"
+        size={small}
+      />
+      <Photo
+        img={Photo37}
+        alt="ペンギンが持ってる立ち入り禁止看板"
+        text="何かとかわいい"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo img={Photo36} alt="ペンギン" text="フンボルトペンギンかな" />
+      <Photo
+        img={Photo38}
+        alt="シロクマ"
+        text="シロクマさん。涼しくなってきた頃だからか元気だった"
+      />
+    </Row>
+    <p class="center">昼飯たべます！</p>
+    <Row>
+      <Photo
+        img={Photo40}
+        alt="あべのハルカス"
+        text="あべのハルカス"
+        size={small}
+      />
+      <Photo
+        img={Photo41}
+        alt="551の豚まん"
+        text="高いビルの地下で豚まんを食す"
+        size={small}
+      />
+    </Row>
+    <p class="center">昼飯たべたので神戸を目指しますが、ちょっと寄り道。</p>
+    <Row>
+      <Photo img={Photo42} alt="大鳥居" text="大きな鳥居" />
+      <Photo
+        img={Photo44}
+        alt="ハチマキしたタコ"
+        text="関西っぽいタコ"
+        size={small}
+      />
+      <Photo
+        img={Photo45}
+        alt="尼崎えびす神社（正面）"
+        text="尼崎えびす神社でした。素敵な御朱印ありがとうございました。"
+        size={small}
+      />
+    </Row>
+    <p class="center">寄り道は尼崎でした。</p>
+    <Row>
+      <Photo
+        img={Photo47}
+        alt="神戸の海の景色"
+        text="ホテルのウェルカムドリンク飲みながら海を眺める"
+      />
+      <Photo
+        img={Photo48}
+        alt="瓶牛乳たち"
+        text="R1って瓶もあるんだ"
+        size={small}
+      />
+    </Row>
+    <p class="center">
+      夜の神戸の景色撮影しようと思っていつも夜に強いレンズを持っていくんですが、
+      <br />
+      結局いつも撮影せずに終わってます。
+      <br />
+      夜景にあんまり興味ない説はあります。
+    </p>
+    <Row>
+      <Photo
+        img={Photo49}
+        alt="スタバのブリスバー"
+        text="この旅でハマったもの、スタバのブリスバー。"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo50}
+        alt="長崎カステラ総本舗"
+        text="やけに気になるお店"
+        size={small}
+      />
+      <Photo img={Photo51} alt="三宮駅前" text="三宮っぽい景色" />
+    </Row>
+    <p class="center">ここで人に会って飲みまして、いっぱい飲みまして帰路へ。</p>
+    <Row>
+      <Photo
+        img={Photo52}
+        alt="人のいない商店街"
+        text="撮りたくなる、夜の商店街"
+        size={small}
+      />
+      <Photo
+        img={Photo53}
+        alt="人のいない商店街（広め）"
+        text="夜でも明るい"
+        size={small}
+      />
+      <Photo
+        img={Photo54}
+        alt="人のいない中華街（入口）"
+        text="夜の神戸中華街"
+      />
+      <Photo
+        img={Photo55}
+        alt="人のいない中華街（真ん中）"
+        text="夜はランタンが素敵"
+        size={small}
+      />
+      <Photo
+        img={Photo56}
+        alt="人のいない中華街（長崎カステラ総本舗）"
+        text="どうしても気になるこのお店"
+        size={small}
+      />
+    </Row>
+    <p class="center">
+      最近水族館ばっかり行ってたのでライオンとかキリンとかはなんだか新鮮な感じがしました。
+      <br />
+      明日は朝から大阪戻って歩き回ります！
+      <br />
+      <br />
+      ちなみに長崎カステラ総本舗は閉店済だそうです。残念。
+    </p>
+  </article>
+</Layout>
+
+<style lang="scss">
+  p {
+    line-height: 1.5rem;
+  }
+  .center {
+    text-align: center;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 3rem;
+  }
+</style>
