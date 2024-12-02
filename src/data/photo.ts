@@ -9,6 +9,7 @@ import photo202401025 from '@/pages/photo/2024/10/25/_20241025_21.jpg'
 import photo202401026 from '@/pages/photo/2024/10/26/_20241026_13.jpg'
 import photo202401108 from '@/pages/photo/2024/11/08/_20241108_2.jpg'
 import Photo20241122 from '@/pages/photo/2024/11/22/_20241122_16.jpg'
+import Photo20241123 from '@/pages/photo/2024/11/23/_20241123_8.jpg'
 
 export type Photo = {
   id: number
@@ -22,6 +23,15 @@ export type Photo = {
 }
 
 export const PhotoList: Photo[] = [
+  {
+    id: 9,
+    title: '大阪・神戸 2日目',
+    eyecatch: Photo20241123,
+    photographingDate: new Date('2024-11-23'),
+    publicationDate: new Date('2024-12-2'),
+    tagList: [TagList.travel, TagList.kinki, TagList.osaka, TagList.kobe],
+    isNew: true,
+  },
   {
     id: 8,
     title: '大阪・神戸 1日目 | 天王寺動物園',

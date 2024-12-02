@@ -1,0 +1,143 @@
+---
+// これはテンプレ
+import Layout from '@/layouts/Layout.astro'
+import Photo from '@/components/Photo.astro'
+import TilteArea from '@/components/photo/TilteArea.astro'
+import Row from '@/components/Row.astro'
+import Photo1 from './_20241123_1.jpg'
+import Photo2 from './_20241123_2.jpg'
+import Photo3 from './_20241123_3.jpg'
+import Photo4 from './_20241123_4.jpg'
+import Photo5 from './_20241123_5.jpg'
+import Photo6 from './_20241123_6.jpg'
+import Photo7 from './_20241123_7.jpg'
+import Photo8 from './_20241123_8.jpg'
+import Photo9 from './_20241123_9.jpg'
+import Photo10 from './_20241123_10.jpg'
+import Photo11 from './_20241123_11.jpg'
+import Photo12 from './_20241123_12.jpg'
+
+import { getPhotoById } from '@/data/photo'
+
+const photo = getPhotoById(9)
+if (!photo) {
+  return new Response(null, {
+    status: 404,
+    statusText: 'Not found',
+  })
+}
+
+const small = 350
+const big = 600
+---
+
+<Layout title={photo.title} ogImage={photo.eyecatch}>
+  <TilteArea photo={photo} />
+  <article>
+    <Row>
+      <Photo
+        img={Photo1}
+        alt="素敵な朝食"
+        text="1日のはじまりは素敵な朝食から"
+      />
+    </Row>
+    <p class="center">
+      朝食は
+      <a
+        href="https://tabelog.com/hyogo/A2801/A280102/28056619/"
+        target="_blank"
+      >
+        SCHOOL BUS COFFEE STOP MOTOMACHI
+      </a>
+      にていただきました。<br />
+      スクールバス型のパンで心ウキウキ。ベーコンもたまごも美味しくて最高でした。
+    </p>
+    <Row>
+      <Photo
+        img={Photo3}
+        alt="貨物列車先頭"
+        text="信号待ちしてたら貨物列車が"
+      />
+      <Photo
+        img={Photo4}
+        alt="貨物列車中盤"
+        text="東京ではあんま昼に貨物列車みかけないので不思議な感じです"
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo5}
+        alt="公衆電話"
+        text="遭遇するたびに撮影してます"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo6}
+        alt="りくろーおじさんのチーズケーキ"
+        text="りくおじチーズケーキを無事入手。"
+        size={small}
+      />
+    </Row>
+    <p class="center">
+      レンチンしてぷるぷる感を楽しんでからおいしく食べました。
+    </p>
+    <Row>
+      <Photo
+        img={Photo7}
+        alt="大阪のたこ焼き"
+        text="とろふわたこ焼き"
+        size={small}
+      />
+    </Row>
+    <p class="center">
+      東京の揚げたこ焼きも好きなんですが、とろふわも定期的には食べたいです。
+    </p>
+    <Row>
+      <Photo img={Photo8} alt="大阪のグリコ" text="グリコ！" size={big} />
+    </Row>
+    <p class="center">
+      テレビでよく見る『大阪』だ！！！<br />
+      土曜だったんですが人がすごい多かったです。原宿かよってくらい多かった。
+    </p>
+    <Row>
+      <Photo
+        img={Photo9}
+        alt="公衆電話（2台）"
+        text="イマドキ2台並んでるのは激レアじゃないですか？"
+        size={small}
+      />
+    </Row>
+    <Row>
+      <Photo
+        img={Photo10}
+        alt="電車内で暴食する様子"
+        text="新幹線はゆっくりごはんが食べれるので良いですね"
+        size={small}
+      />
+    </Row>
+    <p class="center">
+      結局スプーンとか持ってなかったのでブリスバーとおにぎりだけ食べました。
+    </p>
+    <Row>
+      <Photo img={Photo11} alt="送電線" text="こういう景色を撮りがち" />
+      <Photo img={Photo12} alt="曇りの富士山" text="帰りの富士山は曇り" />
+    </Row>
+  </article>
+</Layout>
+
+<style lang="scss">
+  p {
+    line-height: 1.5rem;
+  }
+  .center {
+    text-align: center;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 3rem;
+  }
+</style>
