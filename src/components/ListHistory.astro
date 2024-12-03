@@ -1,0 +1,41 @@
+---
+import { HistoryList } from '@/data/history'
+import { getDate } from '@/utils/dateHelper'
+
+// 数を指定できるようにする
+interface Props {
+  num?: number
+}
+
+// Astro.props から count を取得
+const { num } = Astro.props
+---
+
+<ul>
+  {
+    HistoryList.slice(0, num).map((item) => (
+      <li>
+        <a href={`/history/${item.slug}`}>
+          <span>{getDate(item.pubDate)}</span>
+          <span>{item.title}</span>
+        </a>
+      </li>
+    ))
+  }
+  {
+    num && (
+      <li class="more">
+        <a href="/history">→ 更に過去の更新履歴を見る</a>
+      </li>
+    )
+  }
+</ul>
+
+<style lang="scss">
+  li {
+    margin-bottom: 0.5rem;
+  }
+  .more {
+    margin-top: 1.2rem;
+  }
+</style>

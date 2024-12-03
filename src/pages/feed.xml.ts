@@ -3,7 +3,7 @@ import {
   mySiteName,
   myUrl,
 } from '@/constants/constants'
-import { HistroyList } from '@/data/history'
+import { HistoryList } from '@/data/history'
 import rss from '@astrojs/rss'
 import type { APIContext } from 'astro'
 
@@ -13,7 +13,7 @@ export async function GET(context: APIContext) {
     title: mySiteName,
     description: mySiteDefaultDescription,
     site: context.site ?? myUrl,
-    items: HistroyList.map((post) => {
+    items: HistoryList.map((post) => {
       const url = `${baseUrl}/history/${post.slug}`
       return {
         title: post.title,

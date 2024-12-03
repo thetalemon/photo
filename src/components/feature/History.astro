@@ -1,8 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import RssImage from '@/img/rss.svg'
-import { HistroyList } from '@/data/history'
-import { getDate } from '@/utils/dateHelper'
+import ListHistory from '@/components/ListHistory.astro'
 import SectionTitle from '@/components/SectionTitle.astro'
 ---
 
@@ -13,18 +12,7 @@ import SectionTitle from '@/components/SectionTitle.astro'
       <Image class="rss" src={RssImage} alt="rss" width={16} />
     </a>
   </div>
-  <ul>
-    {
-      HistroyList.map((item) => (
-        <li>
-          <a href={`/history/${item.slug}`}>
-            <span>{getDate(item.pubDate)}</span>
-            <span>{item.title}</span>
-          </a>
-        </li>
-      ))
-    }
-  </ul>
+  <ListHistory num={5} />
 </section>
 
 <style lang="scss">

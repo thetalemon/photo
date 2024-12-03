@@ -22,7 +22,7 @@ const generateDateRelateData = (date: Date) => {
   }
 }
 
-export const HistroyList: History[] = [
+export const HistoryList: History[] = [
   {
     title: '大阪・神戸 2日目をアップしました',
     content: `<p><a href="${generateAbsoluteUrl('/photo/2024/11/23')}">大阪・神戸 2日目</a>をアップしました。</p>`,

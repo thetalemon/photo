@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets'
+import RssImage from '@/img/rss.svg'
+import Layout from '@/layouts/Layout.astro'
+import ListHistory from '@/components/ListHistory.astro'
+---
+
+<Layout>
+  <div class="titleArea">
+    <h2>更新履歴</h2>
+    <a href="/feed.xml" target="_blank" aria-label="RSS">
+      <Image class="rss" src={RssImage} alt="rss" width={18} />
+    </a>
+  </div>
+  <ListHistory />
+</Layout>
+
+<style lang="scss">
+  h2 {
+    margin: 2rem 0 0.5rem 0;
+  }
+  .titleArea {
+    display: flex;
+    align-items: baseline;
+    column-gap: 16px;
+    a {
+      border: none;
+      margin-bottom: 8px;
+    }
+  }
+</style>
