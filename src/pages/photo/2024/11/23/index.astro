@@ -3,9 +3,9 @@
 import Layout from '@/layouts/Layout.astro'
 import Photo from '@/components/Photo.astro'
 import TilteArea from '@/components/photo/TilteArea.astro'
+import Text from '@/components/Text.astro'
 import Row from '@/components/Row.astro'
 import Photo1 from './_20241123_1.jpg'
-import Photo2 from './_20241123_2.jpg'
 import Photo3 from './_20241123_3.jpg'
 import Photo4 from './_20241123_4.jpg'
 import Photo5 from './_20241123_5.jpg'
@@ -41,7 +41,7 @@ const big = 600
         text="1日のはじまりは素敵な朝食から"
       />
     </Row>
-    <p class="center">
+    <Text>
       朝食は
       <a
         href="https://tabelog.com/hyogo/A2801/A280102/28056619/"
@@ -51,7 +51,7 @@ const big = 600
       </a>
       にていただきました。<br />
       スクールバス型のパンで心ウキウキ。ベーコンもたまごも美味しくて最高でした。
-    </p>
+    </Text>
     <Row>
       <Photo
         img={Photo3}
@@ -80,9 +80,7 @@ const big = 600
         size={small}
       />
     </Row>
-    <p class="center">
-      レンチンしてぷるぷる感を楽しんでからおいしく食べました。
-    </p>
+    <Text>レンチンしてぷるぷる感を楽しんでからおいしく食べました。</Text>
     <Row>
       <Photo
         img={Photo7}
@@ -91,16 +89,16 @@ const big = 600
         size={small}
       />
     </Row>
-    <p class="center">
+    <Text>
       東京の揚げたこ焼きも好きなんですが、とろふわも定期的には食べたいです。
-    </p>
+    </Text>
     <Row>
       <Photo img={Photo8} alt="大阪のグリコ" text="グリコ！" size={big} />
     </Row>
-    <p class="center">
+    <Text>
       テレビでよく見る『大阪』だ！！！<br />
       土曜だったんですが人がすごい多かったです。原宿かよってくらい多かった。
-    </p>
+    </Text>
     <Row>
       <Photo
         img={Photo9}
@@ -117,9 +115,9 @@ const big = 600
         size={small}
       />
     </Row>
-    <p class="center">
+    <Text>
       結局スプーンとか持ってなかったのでブリスバーとおにぎりだけ食べました。
-    </p>
+    </Text>
     <Row>
       <Photo img={Photo11} alt="送電線" text="こういう景色を撮りがち" />
       <Photo img={Photo12} alt="曇りの富士山" text="帰りの富士山は曇り" />
@@ -128,12 +126,6 @@ const big = 600
 </Layout>
 
 <style lang="scss">
-  p {
-    line-height: 1.5rem;
-  }
-  .center {
-    text-align: center;
-  }
   article {
     display: flex;
     flex-direction: column;

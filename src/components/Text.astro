@@ -1,0 +1,25 @@
+---
+interface Props {
+  align?: 'left' | 'center' | 'right'
+}
+
+const { align } = Astro.props
+
+const textAlign = align ?? 'center'
+---
+
+<p class=`flex ${textAlign}`>
+  <slot />
+</p>
+
+<style lang="scss">
+  p {
+    line-height: 1.5rem;
+  }
+  .center {
+    text-align: center;
+  }
+  .right {
+    text-align: right;
+  }
+</style>
