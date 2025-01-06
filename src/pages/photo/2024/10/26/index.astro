@@ -2,7 +2,7 @@
 // これはテンプレ
 import Layout from '@/layouts/Layout.astro'
 import Photo from '@/components/Photo.astro'
-import TilteArea from '@/components/photo/TilteArea.astro'
+import TitleArea from '@/components/photo/TitleArea.astro'
 import Row from '@/components/Row.astro'
 import { getPhotoById } from '@/data/photo'
 import Photo3 from './_20241026_3.jpg'
@@ -30,7 +30,7 @@ const big = 600
 ---
 
 <Layout title={photo.title} ogImage={photo.eyecatch}>
-  <TilteArea photo={photo} />
+  <TitleArea photo={photo} />
   <article>
     <p class="center">福岡から帰る時間だ…………</p>
     <Row>

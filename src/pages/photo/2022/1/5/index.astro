@@ -2,7 +2,7 @@
 import Layout from '@/layouts/Layout.astro'
 import Photo from '@/components/Photo.astro'
 import { getPhotoById } from '@/data/photo'
-import TilteArea from '@/components/photo/TilteArea.astro'
+import TitleArea from '@/components/photo/TitleArea.astro'
 import Row from '@/components/Row.astro'
 import Photo1 from './_1.jpg'
 
@@ -16,7 +16,7 @@ if (!photo) {
 ---
 
 <Layout title={photo.title} ogImage={photo.eyecatch}>
-  <TilteArea photo={photo} />
+  <TitleArea photo={photo} />
   <p>多分トリキバーガーを買って交差点で信号待ちしてた時</p>
   <Row>
     <Photo
