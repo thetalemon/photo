@@ -2,6 +2,7 @@
 import Layout from '@/layouts/Layout.astro'
 import Photo from '@/components/Photo.astro'
 import TitleArea from '@/components/photo/TitleArea.astro'
+import Text from '@/components/Text.astro'
 import Row from '@/components/Row.astro'
 import { getPhotoById } from '@/data/photo'
 import Photo1 from './_20241122_1.jpg'
@@ -76,11 +77,11 @@ const big = 600
 <Layout title={photo.title} ogImage={photo.eyecatch}>
   <TitleArea photo={photo} />
   <article>
-    <p class="center">
+    <Text>
       人に会いに神戸に行くのですが、神戸は何度か行ってるので大阪経由で行きます。
       <br />
       というわけで羽田から新大阪へ。
-    </p>
+    </Text>
     <Row>
       <Photo
         img={Photo1}
@@ -101,9 +102,9 @@ const big = 600
     <Row>
       <Photo img={Photo4} alt="富士山" text="富士山だ！！！" size={big} />
     </Row>
-    <p class="center">
+    <Text>
       飛行機で南には何度も行ってるはずなんですが、ここまで綺麗に富士山を見たのは初めてな気がします。
-    </p>
+    </Text>
     <Row>
       <Photo img={Photo5} alt="愛知県っぽい" text="多分知多半島" size={small} />
       <Photo img={Photo6} alt="山間に雲" text="谷ってくもりの日多いのかな" />
@@ -120,7 +121,7 @@ const big = 600
     <Row>
       <Photo img={Photo9} alt="半分が透明な広告" text="大阪は広告もユニーク" />
     </Row>
-    <p class="center">まずは天王寺動物園へ。</p>
+    <Text>まずは天王寺動物園へ。</Text>
     <Row>
       <Photo img={Photo10} alt="カメ" text="カメにはじまり……" />
       <Photo img={Photo11} alt="多分すっぽん" text="すっぽんが鼻をぐいぐい" />
@@ -153,9 +154,7 @@ const big = 600
       <Photo img={Photo24} alt="タヌキの体重測定の方法" text="かわいい" />
       <Photo img={Photo29} alt="タヌキ" text="昼タヌキ" />
     </Row>
-    <p class="center">
-      タヌキ狙いだったので粘ったんですが、上手く撮れず。無念…………。
-    </p>
+    <Text> タヌキ狙いだったので粘ったんですが、上手く撮れず。無念…………。 </Text>
     <Row>
       <Photo
         img={Photo30}
@@ -206,7 +205,7 @@ const big = 600
         text="シロクマさん。涼しくなってきた頃だからか元気だった"
       />
     </Row>
-    <p class="center">昼飯たべます！</p>
+    <Text>昼飯たべます！</Text>
     <Row>
       <Photo
         img={Photo40}
@@ -221,7 +220,7 @@ const big = 600
         size={small}
       />
     </Row>
-    <p class="center">昼飯たべたので神戸を目指しますが、ちょっと寄り道。</p>
+    <Text>昼飯たべたので神戸を目指しますが、ちょっと寄り道。</Text>
     <Row>
       <Photo img={Photo42} alt="大鳥居" text="大きな鳥居" />
       <Photo
@@ -237,7 +236,7 @@ const big = 600
         size={small}
       />
     </Row>
-    <p class="center">寄り道は尼崎でした。</p>
+    <Text>寄り道は尼崎でした。</Text>
     <Row>
       <Photo
         img={Photo47}
@@ -251,13 +250,13 @@ const big = 600
         size={small}
       />
     </Row>
-    <p class="center">
+    <Text>
       夜の神戸の景色撮影しようと思っていつも夜に強いレンズを持っていくんですが、
       <br />
       結局いつも撮影せずに終わってます。
       <br />
       夜景にあんまり興味ない説はあります。
-    </p>
+    </Text>
     <Row>
       <Photo
         img={Photo49}
@@ -275,7 +274,7 @@ const big = 600
       />
       <Photo img={Photo51} alt="三宮駅前" text="三宮っぽい景色" />
     </Row>
-    <p class="center">ここで人に会って飲みまして、いっぱい飲みまして帰路へ。</p>
+    <Text>ここで人に会って飲みまして、いっぱい飲みまして帰路へ。</Text>
     <Row>
       <Photo
         img={Photo52}
@@ -307,24 +306,18 @@ const big = 600
         size={small}
       />
     </Row>
-    <p class="center">
+    <Text>
       最近水族館ばっかり行ってたのでライオンとかキリンとかはなんだか新鮮な感じがしました。
       <br />
       明日は朝から大阪戻って歩き回ります！
       <br />
       <br />
       ちなみに長崎カステラ総本舗は閉店済だそうです。残念。
-    </p>
+    </Text>
   </article>
 </Layout>
 
 <style lang="scss">
-  p {
-    line-height: 1.5rem;
-  }
-  .center {
-    text-align: center;
-  }
   article {
     display: flex;
     flex-direction: column;
