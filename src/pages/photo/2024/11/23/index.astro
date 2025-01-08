@@ -2,6 +2,7 @@
 import Layout from '@/layouts/Layout.astro'
 import Photo from '@/components/Photo.astro'
 import TitleArea from '@/components/photo/TitleArea.astro'
+import ArticleArea from '@/components/photo/ArticleArea.astro'
 import Text from '@/components/Text.astro'
 import Row from '@/components/Row.astro'
 import Photo1 from './_20241123_1.jpg'
@@ -32,7 +33,7 @@ const big = 600
 
 <Layout title={photo.title} ogImage={photo.eyecatch}>
   <TitleArea photo={photo} />
-  <article>
+  <ArticleArea>
     <Row>
       <Photo
         img={Photo1}
@@ -121,14 +122,5 @@ const big = 600
       <Photo img={Photo11} alt="送電線" text="こういう景色を撮りがち" />
       <Photo img={Photo12} alt="曇りの富士山" text="帰りの富士山は曇り" />
     </Row>
-  </article>
+  </ArticleArea>
 </Layout>
-
-<style lang="scss">
-  article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    row-gap: 3rem;
-  }
-</style>
