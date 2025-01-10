@@ -3,6 +3,8 @@
 import Layout from '@/layouts/Layout.astro'
 import Photo from '@/components/Photo.astro'
 import TitleArea from '@/components/photo/TitleArea.astro'
+import ArticleArea from '@/components/photo/ArticleArea.astro'
+import Text from '@/components/Text.astro'
 import Row from '@/components/Row.astro'
 import { getPhotoById } from '@/data/photo'
 import Photo1 from './_20241108_1.jpg'
@@ -46,7 +48,7 @@ const big = 600
 
 <Layout title={photo.title} ogImage={photo.eyecatch}>
   <TitleArea photo={photo} />
-  <article>
+  <ArticleArea>
     <Row>
       <Photo
         img={Photo1}
@@ -55,14 +57,14 @@ const big = 600
         size={small}
       />
     </Row>
-    <p class="center">
+    <Text>
       <a
         href="https://tabelog.com/saitama/A1103/A110303/11003217/"
         target="_blank"
       >
         うんとん処 春・夏・秋・冬
       </a>という路地に入った隠れたお店。すぐ満員になったので人気店っぽい。
-    </p>
+    </Text>
     <Row>
       <Photo
         img={Photo2}
@@ -120,13 +122,13 @@ const big = 600
       <Photo img={Photo23} alt="花手水" text="花手水いいよね" />
       <Photo img={Photo24} alt="稲" text="きれいに実ってる" />
     </Row>
-    <p class="center">
+    <Text>
       川越、食べ歩きできるおいしそうなのもいっぱいあったんですが、
       <br />
       角煮とうどんセットの後には何も入らなかった。
       <br />
       そんなわけで川越を後にして大宮へ。
-    </p>
+    </Text>
     <Row>
       <Photo img={Photo25} alt="大きな鳥居" text="大宮の氷川神社" size={big} />
 
@@ -159,7 +161,7 @@ const big = 600
         size={small}
       />
     </Row>
-    <p class="center">
+    <Text>
       ジンギスカンは
       <a
         href="https://tabelog.com/saitama/A1101/A110101/11001594/"
@@ -171,14 +173,14 @@ const big = 600
       初ジンギスカンだったんですが最高に美味しかった！
       <br />
       豚肉と牛肉の中間って感じ。
-    </p>
-    <p class="center">
+    </Text>
+    <Text>
       川越氷川神社 → 川越八幡宮 →武蔵一宮
       氷川神社（大宮）というルートの神社巡りでした。
       <br />
       川越だけでも充分1日過ごせそうだったのでまた川越したい。
-    </p>
-  </article>
+    </Text>
+  </ArticleArea>
 </Layout>
 
 <style lang="scss">
