@@ -3,6 +3,8 @@
 import Layout from '@/layouts/Layout.astro'
 import Photo from '@/components/Photo.astro'
 import TitleArea from '@/components/photo/TitleArea.astro'
+import ArticleArea from '@/components/photo/ArticleArea.astro'
+import Text from '@/components/Text.astro'
 import Row from '@/components/Row.astro'
 import { getPhotoById } from '@/data/photo'
 import Photo3 from './_20241026_3.jpg'
@@ -31,8 +33,8 @@ const big = 600
 
 <Layout title={photo.title} ogImage={photo.eyecatch}>
   <TitleArea photo={photo} />
-  <article>
-    <p class="center">福岡から帰る時間だ…………</p>
+  <ArticleArea>
+    <Text>福岡から帰る時間だ…………</Text>
     <Row>
       <Photo
         img={Photo3}
@@ -81,31 +83,16 @@ const big = 600
       <Photo img={Photo12} alt="雲の上" text="雲の上はいつでも快晴" />
       <Photo img={Photo13} alt="雲の上の夕暮れ" text="日が暮れてきた" />
     </Row>
-    <p class="center">
+    <Text>
       窓の外の景色が見たいので夜便ではなく夕方便を選ぶことが多いです。
-    </p>
+    </Text>
     <Row>
       <Photo img={Photo15} alt="おみやげうまかっちゃん" text="まだ食べてない" />
     </Row>
-    <p class="center">
+    <Text>
       これにて福岡旅行、終了～～！です。<br />
       初福岡、友人アテンドもあってだいぶ楽しませていただきました。<br />
       大宰府とか行きたいところまだまだ残ってるのでまた行きたいです。
-    </p>
-  </article>
+    </Text>
+  </ArticleArea>
 </Layout>
-
-<style lang="scss">
-  p {
-    line-height: 1.5rem;
-  }
-  .center {
-    text-align: center;
-  }
-  article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    row-gap: 3rem;
-  }
-</style>
