@@ -1,8 +1,9 @@
 ---
-// これはテンプレ
 import Layout from '@/layouts/Layout.astro'
 import Photo from '@/components/Photo.astro'
 import TitleArea from '@/components/photo/TitleArea.astro'
+import ArticleArea from '@/components/photo/ArticleArea.astro'
+import Text from '@/components/Text.astro'
 import Row from '@/components/Row.astro'
 import { getPhotoById } from '@/data/photo'
 import Photo1 from './_20241025_1.jpg'
@@ -67,7 +68,7 @@ const big = 600
 
 <Layout title={photo.title} ogImage={photo.eyecatch}>
   <TitleArea photo={photo} />
-  <article>
+  <ArticleArea>
     <Row>
       <Photo
         img={Photo1}
@@ -76,7 +77,7 @@ const big = 600
         size={small}
       />
     </Row>
-    <p class="center">本日は朝から船にのってマリンワールド海の中道へ</p>
+    <Text>本日は朝から船にのってマリンワールド海の中道へ</Text>
     <Row>
       <Photo
         img={Photo3}
@@ -138,7 +139,7 @@ const big = 600
         size={small}
       />
     </Row>
-    <p class="center">ちょうどペンギンショーの遭遇したので見ていくことに</p>
+    <Text>ちょうどペンギンショーの遭遇したので見ていくことに</Text>
     <Row>
       <Photo img={Photo18} alt="テクテクペンギン" text="エサについていく" />
       <Photo
@@ -163,9 +164,9 @@ const big = 600
       />
       <Photo img={Photo26} alt="首を傾げたペンギン" text="きょるん" />
     </Row>
-    <p class="center">
+    <Text>
       ペンギンの次はイルカもショーやるよ～！と言われたのでイルカも見ていく。
-    </p>
+    </Text>
     <Row>
       <Photo img={Photo27} alt="口を開いたバンドウイルカ" text="おくちあーん" />
       <Photo
@@ -188,15 +189,15 @@ const big = 600
         size={small}
       />
     </Row>
-    <p class="center">ペンギン・イルカを堪能して大水槽へ。でかい。</p>
+    <Text>ペンギン・イルカを堪能して大水槽へ。でかい。</Text>
     <Row>
       <Photo img={Photo32} alt="サメ。多分シロワニ" text="ド迫力" />
       <Photo img={Photo33} alt="エイ" text="エイもいる" />
       <Photo img={Photo34} alt="横エイ" text="横向きだとアラジンの絨毯みたい" />
     </Row>
-    <p class="center">
+    <Text>
       なんでエイって普通に泳げるのに水槽に張り付いて落ちていくんでしょうね
-    </p>
+    </Text>
     <Row>
       <Photo
         img={Photo35}
@@ -208,9 +209,9 @@ const big = 600
     <Row>
       <Photo img={Photo36} alt="スナメリ" text="スナメリもかわいい" />
     </Row>
-    <p class="center">
+    <Text>
       スナメリもアザラシも結構粘ったんですが、水中で動き回る子は撮るの難しいです
-    </p>
+    </Text>
     <Row>
       <Photo img={Photo37} alt="タコクラゲ" text="ふわふわ" />
       <Photo img={Photo38} alt="タコクラゲ" text="ぷかぷか" />
@@ -246,7 +247,7 @@ const big = 600
         text="レストランの水槽の子"
       />
     </Row>
-    <p class="center">そしてお目当てのラッコ！！！</p>
+    <Text>そしてお目当てのラッコ！！！</Text>
     <Row>
       <Photo
         img={Photo47}
@@ -264,7 +265,7 @@ const big = 600
         text="ラッコっぽいポーズ"
       />
     </Row>
-    <p class="center">ラッコ結構、動き回るので撮影難度は高めでした………</p>
+    <Text>ラッコ結構、動き回るので撮影難度は高めでした………</Text>
     <Row>
       <Photo
         img={Photo50}
@@ -272,11 +273,11 @@ const big = 600
         text="奥でハナゴンドウがタテになってる"
       />
     </Row>
-    <p class="center">
+    <Text>
       ちなみにこのパフェ焼き芋がまるまる1本入ってる。重い。
       <br />
       おなかも満ちたので帰ります。
-    </p>
+    </Text>
     <Row>
       <Photo
         img={Photo51}
@@ -300,7 +301,7 @@ const big = 600
         size={small}
       />
     </Row>
-    <p class="center">帰りも船です。乗船時間は20分くらい。景色は普通。</p>
+    <Text>帰りも船です。乗船時間は20分くらい。景色は普通。</Text>
     <Row>
       <Photo
         img={Photo55}
@@ -326,27 +327,12 @@ const big = 600
         size={big}
       />
     </Row>
-    <p class="center">
+    <Text>
       マリンワールド海の中道編、終わり。<br />
       ラッコやっと会えた！良かった！<br />
       1番印象に残ったのはペンギンの丘で、丘のまわりをぐるっとできるので上から下からペンギンが見れます。
       <br />
       植え込みの下に隠れてる子とかも居て、見てて楽しかったです。
-    </p>
-  </article>
+    </Text>
+  </ArticleArea>
 </Layout>
-
-<style lang="scss">
-  p {
-    line-height: 1.5rem;
-  }
-  .center {
-    text-align: center;
-  }
-  article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    row-gap: 3rem;
-  }
-</style>
