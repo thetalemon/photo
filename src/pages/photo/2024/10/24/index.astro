@@ -2,6 +2,8 @@
 import Layout from '@/layouts/Layout.astro'
 import Photo from '@/components/Photo.astro'
 import TitleArea from '@/components/photo/TitleArea.astro'
+import ArticleArea from '@/components/photo/ArticleArea.astro'
+import Text from '@/components/Text.astro'
 import Row from '@/components/Row.astro'
 import { getPhotoById } from '@/data/photo'
 import Photo1 from './_20241024_1.jpg'
@@ -72,7 +74,7 @@ const big = 600
 
 <Layout title={photo.title} ogImage={photo.eyecatch}>
   <TitleArea photo={photo} />
-  <article>
+  <ArticleArea>
     <Row>
       <Photo
         img={Photo1}
@@ -139,9 +141,9 @@ const big = 600
         size={big}
       />
     </Row>
-    <p class="center">
+    <Text>
       今もレトロ感ありますがこれは改修後の姿らしく、改修前はガチレトロだったらしいです。
-    </p>
+    </Text>
     <Row>
       <Photo
         img={Photo14}
@@ -156,11 +158,11 @@ const big = 600
         size={big}
       />
     </Row>
-    <p class="center">
+    <Text>
       <a href="https://hanaria.jp/" target="_blank">HANARIA</a
       >は洋上参拝クルーズとか色々やってるみたい。<br />
       再訪する時はぜひ乗りたい。
-    </p>
+    </Text>
     <Row>
       <Photo
         img={Photo16}
@@ -190,11 +192,11 @@ const big = 600
         size={big}
       />
     </Row>
-    <p class="center">
+    <Text>
       門司港展望台に行こうとしてたのですが跳ね橋が上がってしまったので遠回りすることに…………。
       <br />
       というわけで遠回りして行った展望台からの景色をお楽しみください
-    </p>
+    </Text>
     <Row>
       <Photo img={Photo22} alt="街並み" text="ビルもあって山もあって良い景色" />
       <Photo
@@ -236,7 +238,7 @@ const big = 600
       />
       <Photo img={Photo32} alt="アンテナ" text="大好き鉄塔（N度目）" />
     </Row>
-    <p class="center">
+    <Text>
       港の人間とか鉄塔関連業に就いてみたくなってきました
       <br />
       展望台料金は300円。上でおやつとかも食べれるので休憩にもよさそうです。
@@ -244,7 +246,7 @@ const big = 600
       私は遠回りしてる途中で門司港クルーズの存在を知ったので展望台はササっと撮って降りました。
       <br />
       ここからは門司港クルーズの写真をお楽しみください！
-    </p>
+    </Text>
     <Row>
       <Photo
         img={Photo33}
@@ -288,9 +290,9 @@ const big = 600
         text="ぼーっとしてたら噴水はじまった"
       />
     </Row>
-    <p class="center">
+    <Text>
       そんなわけで門司港クルーズで門司港を〆て、旅の最終地点、博多に鈍行でどんぶらこ。
-    </p>
+    </Text>
     <Row>
       <Photo
         img={Photo49}
@@ -317,9 +319,9 @@ const big = 600
         text="東京ではめっきり見なくなりました"
       />
     </Row>
-    <p class="center">
+    <Text>
       リバークルーズに乗るか悩んだのですが、ちょうど17時で値段が倍だったので待ち合わせまで寝ました。
-    </p>
+    </Text>
     <Row>
       <Photo
         img={Photo56}
@@ -345,15 +347,15 @@ const big = 600
         text="コンビニを3件ハシゴして見つけたマンハッタン"
       />
     </Row>
-    <p class="center">
+    <Text>
       門司港→博多編でした。<br />
       もつ鍋今まで食べる機会がなくて食べたことなかったんですがほんとにおいしかった！
       <br />
       マンハッタンは次の日の朝ごはんになったんですが、アラサーが朝に食べるパンじゃなかった。
       <br />
       パンっていうかドーナツのオールドファッションに近いかも。
-    </p>
-  </article>
+    </Text>
+  </ArticleArea>
 </Layout>
 
 <style lang="scss">
