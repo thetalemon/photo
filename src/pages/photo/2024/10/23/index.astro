@@ -2,6 +2,8 @@
 import Layout from '@/layouts/Layout.astro'
 import Photo from '@/components/Photo.astro'
 import TitleArea from '@/components/photo/TitleArea.astro'
+import ArticleArea from '@/components/photo/ArticleArea.astro'
+import Text from '@/components/Text.astro'
 import Row from '@/components/Row.astro'
 import { getPhotoById } from '@/data/photo'
 import Photo0 from './_20241023_0.jpg'
@@ -38,15 +40,15 @@ const big = 600
 
 <Layout title={photo.title} ogImage={photo.eyecatch}>
   <TitleArea photo={photo} />
-  <article>
+  <ArticleArea>
     <Row>
       <Photo img={Photo1} alt="海" text="海はやや時化" size={big} />
     </Row>
-    <p class="center">
+    <Text>
       おはようございます。<br />
       寝れるか心配だったのですが揺れもあって寝台列車よりも寝れました。<br />
       アイマスク持って行ったのはナイス判断だったかもしれません。
-    </p>
+    </Text>
     <Row>
       <Photo
         img={Photo0}
@@ -64,9 +66,7 @@ const big = 600
     <Row>
       <Photo img={Photo4} alt="はまゆうの御船印" text="御船印も買いまして" />
     </Row>
-    <p class="center">
-      購入は23日ですが出航日の22日でスタンプ押してもらいました。
-    </p>
+    <Text> 購入は23日ですが出航日の22日でスタンプ押してもらいました。 </Text>
     <Row>
       <Photo
         img={Photo5}
@@ -75,12 +75,12 @@ const big = 600
         size={small}
       />
     </Row>
-    <p class="center">
+    <Text>
       昨日もサンデーカップ食べてますが売店は結構種類豊富です。<br />
       横須賀・福岡両方の色々なものを揃えてて、カールも売ってます。<br />
       堅あげポテト九州しょうゆ味はちょっと味濃いめでした。<br />
       九州ってもしかして味濃い！？って心配だったんですが、結論大丈夫でした。
-    </p>
+    </Text>
     <Row>
       <Photo img={Photo6} alt="窓の外の海" text="海を見て" size={small} />
       <Photo
@@ -90,10 +90,10 @@ const big = 600
         size={small}
       />
     </Row>
-    <p class="center">
+    <Text>
       刺身とメロンソーダはないなって刺身がきてから気づきました。<br />
       でもドリンクバーのメロンソーダ、好きで…………。
-    </p>
+    </Text>
     <Row>
       <Photo img={Photo8} alt="少し荒れた海" text="また海を見て" size={small} />
       <Photo img={Photo9} alt="夕暮れの海" text="日が暮れてきた" size={small} />
@@ -107,7 +107,7 @@ const big = 600
         size={small}
       />
     </Row>
-    <p class="center">下船後は無料のバスにのって小倉駅へ。</p>
+    <Text>下船後は無料のバスにのって小倉駅へ。</Text>
     <Row>
       <Photo
         img={Photo13}
@@ -124,9 +124,9 @@ const big = 600
         size={small}
       />
     </Row>
-    <p class="center">福岡、実は餃子も有名らしい。次は食べる。</p>
+    <Text>福岡、実は餃子も有名らしい。次は食べる。</Text>
 
-    <p class="center">宿についたので小倉散策へ</p>
+    <Text>宿についたので小倉散策へ</Text>
     <Row>
       <Photo
         img={Photo14}
@@ -158,7 +158,7 @@ const big = 600
         size={small}
       />
     </Row>
-    <p class="center">
+    <Text>
       宿で『今あいてるいい感じの店！！！』で探してみつけた
       <a
         href="https://tabelog.com/fukuoka/A4004/A400401/40044886/"
@@ -169,27 +169,12 @@ const big = 600
       というお店。<br />
       入口はちょっと入りづらいけど雰囲気良し、味良しでオススメ。<br />
       現金のみなので注意。
-    </p>
+    </Text>
 
-    <p class="center">
+    <Text>
       人生初長距離フェリー旅編でした。<br />
       個人的には飛行機の方が好きだなあと思いましたが、<br />
       人生で1回経験して面白い経験のひとつでもあるなーと思います。<br />
-    </p>
-  </article>
+    </Text>
+  </ArticleArea>
 </Layout>
-
-<style lang="scss">
-  p {
-    line-height: 1.5rem;
-  }
-  .center {
-    text-align: center;
-  }
-  article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    row-gap: 3rem;
-  }
-</style>
