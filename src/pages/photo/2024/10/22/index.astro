@@ -2,6 +2,8 @@
 import Layout from '@/layouts/Layout.astro'
 import Photo from '@/components/Photo.astro'
 import TitleArea from '@/components/photo/TitleArea.astro'
+import ArticleArea from '@/components/photo/ArticleArea.astro'
+import Text from '@/components/Text.astro'
 import Row from '@/components/Row.astro'
 import { getPhotoById } from '@/data/photo'
 import Photo1 from './_20241022_1.jpg'
@@ -43,10 +45,10 @@ const big = 600
 
 <Layout title={photo.title} ogImage={photo.eyecatch}>
   <TitleArea photo={photo} />
-  <article>
-    <p class="center">
+  <ArticleArea>
+    <Text>
       行くぞ、福岡。<br />ということで横須賀フェリーターミナルへ
-    </p>
+    </Text>
     <Row>
       <Photo
         img={Photo1}
@@ -109,9 +111,9 @@ const big = 600
         size={small}
       />
     </Row>
-    <p class="center">
+    <Text>
       『マジ？この先になんかある？』って感じの道だったので看板あってよかった。
-    </p>
+    </Text>
     <Row>
       <Photo
         img={Photo10}
@@ -138,15 +140,15 @@ const big = 600
         size={small}
       />
     </Row>
-    <p class="center">
+    <Text>
       コロッケ以外にもカレーライスとかあるので、はらぺこで行っても大丈夫。
-    </p>
+    </Text>
     <Row>
       <Photo img={Photo14} alt="フェリー" text="これに乗る" />
     </Row>
-    <p class="center">
+    <Text>
       フェリーって乗船手続きとかどうなん？飛行機くらいかかるんかな？って思ってはやめに行ったら、特に何もなかった。
-    </p>
+    </Text>
     <Row>
       <Photo
         img={Photo15}
@@ -179,9 +181,9 @@ const big = 600
         size={small}
       />
     </Row>
-    <p class="center">
+    <Text>
       角部屋なのもあってか夜は少し寒かった。あと湿度もちょっと低めに感じた。
-    </p>
+    </Text>
     <Row>
       <Photo
         img={Photo21}
@@ -192,9 +194,9 @@ const big = 600
       <Photo img={Photo22} alt="夜の横須賀" text="横須賀も綺麗だなあ" />
       <Photo img={Photo20} alt="フェリーから見る夜空" text="月がきれい" />
     </Row>
-    <p class="center">
+    <Text>
       出航してしまうと甲板には出れなくなる。なので、甲板に出るチャンスは乗った直後～出航するまで
-    </p>
+    </Text>
     <Row>
       <Photo
         img={Photo23}
@@ -208,25 +210,10 @@ const big = 600
         text="夜食です"
       />
     </Row>
-    <p class="center">
+    <Text>
       出航直後は爆音ヤバくて寝れるか心配だったんですが、しばらくしたら音は止みました。
       <br />
       おやすみ。
-    </p>
-  </article>
+    </Text>
+  </ArticleArea>
 </Layout>
-
-<style lang="scss">
-  p {
-    line-height: 1.5rem;
-  }
-  .center {
-    text-align: center;
-  }
-  article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    row-gap: 3rem;
-  }
-</style>
