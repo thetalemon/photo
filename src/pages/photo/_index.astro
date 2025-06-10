@@ -1,9 +1,9 @@
 ---
 // これはテンプレ
 import Layout from '@/layouts/Layout.astro'
-import Photo from '@/components/Photo.astro'
+// import Photo from '@/components/Photo.astro'
 import TitleArea from '@/components/photo/TitleArea.astro'
-import Row from '@/components/Row.astro'
+// import Row from '@/components/Row.astro'
 import { getPhotoById } from '@/data/photo'
 
 const photo = getPhotoById(3)
@@ -14,8 +14,8 @@ if (!photo) {
   })
 }
 
-const small = 350
-const big = 600
+// const small = 350
+// const big = 600
 ---
 
 <Layout title={photo.title} ogImage={photo.eyecatch}>
